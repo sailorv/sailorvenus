@@ -1,7 +1,10 @@
+@import 'header.css';
+
 body {
   background-image: url('assets/starry.gif');
   background-attachment: fixed;
   color: #0080FF;
+  background-color: #000;
 }
 
 #website-wrapper {
@@ -65,6 +68,8 @@ h1:after {
 footer {
   text-align: center;
   font-family: 'Courier New', monospace;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 a.instagram-link {
@@ -73,4 +78,35 @@ a.instagram-link {
 }
 a.instagram-link:hover {
   border: 2px solid yellow;
+}
+
+#weblog h2 {
+  text-align: center;
+}
+
+a.guestbook-link {
+  display: inline-block;
+  color: #fff;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 18pt;
+  margin: auto 20px;
+  padding: 20px;
+}
+a.guestbook-link:hover {
+  text-decoration: none;
+  color: gold;
+}
+.guestbook-link:before {
+  content: '';
+  background-image: url('assets/artemis.gif');
+  display: block;
+  float: left;
+  height: 80px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+
+.meta {
+  font-family: "Courier New", monospace;
 }
