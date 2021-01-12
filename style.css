@@ -110,3 +110,23 @@ a.guestbook-link:hover {
 .meta {
   font-family: "Courier New", monospace;
 }
+
+a.email-me {
+  color: pink;
+  cursor: crosshair;
+  display: block;
+  width: 200px;
+  background-image: url('assets/ring.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 10px auto;
+  text-align: left;
+  font-family: cursive;
+
+}
+a:hover.email-me {
+  color: white;
+}
