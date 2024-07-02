@@ -1,0 +1,54 @@
+body {
+    font-family: "JetBrains Mono", monospace;
+    margin: 0;
+}
+
+:root {
+    --sp-base: 20px;
+    --sp-xs: 10px;
+}
+
+.start-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    height: 20px;
+    color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    gap: 100px;
+}
+
+.icon-grid {
+    display: flex;
+    margin: var(--sp-base);
+    gap: var(--sp-base);
+    flex-wrap: wrap;
+    width: calc(84px * 2);
+}
+
+.window-body > .icon-grid {
+    width: 100%;
+}
+
+.icon-grid div:nth-child(2n) {
+    flex-break: after;
+}
+
+.icon-app {
+    width: 64px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.icon-app img {
+    display: block;
+    width: 32px;
+    margin: auto;
+}
+
+@import 'window';
+@import 'icons';
+@import 'scrollbar';

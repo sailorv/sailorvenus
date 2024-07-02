@@ -1,0 +1,25 @@
+/* Icon Library */
+.icon-app:hover {
+    cursor: hand;
+}
+.icon-app.folder {
+    padding-top: 32px;
+    background-image: url('../images/Folder.ico');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+}
+.icon-app.folder:hover {
+    background-image: url('../images/Folder-Open.ico');
+}
+
+.icon-app.wing {
+    padding-top: 32px;
+    background-image: url('../images/main_small.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+}
+.icon-app.wing:hover {
+    background-image: url('../images/main_small_hover.png');
+}

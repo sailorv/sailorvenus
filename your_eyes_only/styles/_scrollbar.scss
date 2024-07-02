@@ -1,0 +1,89 @@
+// scrollbar
+// https://codepen.io/louh/pen/oZJQvm
+// custom colors
+$g1: lighten(#C5C1C6, 10%);
+$g2: lighten(#C5C1C6, 2%);
+$g3: darken(#C5C1C6, 15%);
+$hi: #F5C8BF;
+$wh: white;
+$bl: darken(#C5C1C6, 50%);
+$bg: #E0D2C5;
+
+// arrows
+$up: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGklEQVR4AWMYxuA/SYphmETFhDX9x4mHGQAAcL4P8dQiMq8AAAAASUVORK5CYII=';
+$dn: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAF0lEQVQY02NgoBf4jwJxSOHQhcNAOgMAWWAP8Rv2U3UAAAAASUVORK5CYII=';
+$lt: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAHklEQVQY02NgoBT8xyX8H5fwf1zCpOjAYwceV1EEAAO2D/HsQ4vsAAAAAElFTkSuQmCC';
+$rt: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAHUlEQVQY02NgIB/8xy3xH7fEf9wS/0nUQZqrKAYAK44P8ZRmzLQAAAAASUVORK5CYII=';
+$re: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAN0lEQVR4Ae3MgQUAMBRDwU5fFF05lb/CARTBw2Ulof0DxPtcwp3hNuEYnjbcEW4TjuFpwx3h9gMWGgZ2Y/PT2gAAAABJRU5ErkJggg==';
+
+@mixin ch {
+	background-color: $wh;
+	background-image: linear-gradient(45deg, lighten($g2, 15%) 25%, transparent 25%, transparent 75%, lighten($g2, 15%) 75%, lighten($g2, 15%)), 
+		linear-gradient(45deg, lighten($g2, 15%) 25%, transparent 25%, transparent 75%, lighten($g2, 15%) 75%, lighten($g2, 15%));
+	background-size: 2px 2px;
+	background-position: 0 0, 1px 1px
+}
+
+::-webkit-scrollbar {
+	width: 16px;
+	height: 16px;
+}
+::-webkit-scrollbar-track {
+	@include ch;
+	&:active {}
+}
+::-webkit-scrollbar-thumb {
+	box-shadow: inset -1px -1px 0 0 $bl, inset 1px 1px 0 0 $g2, inset -2px -2px 0 0 $g3, inset 2px 2px 0 0 $wh;
+	width: 16px;
+	height: 16px;
+	background-color: $g2;
+	z-index: 1;
+}
+::-webkit-scrollbar-corner {
+	background-color: $g2;
+}
+::-webkit-resizer {
+	width: 16px;
+	height: 16px;
+	background-color: $g2;
+	background-image: url($re);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	image-rendering: pixelated;
+}
+::-webkit-scrollbar-button {
+	box-shadow: inset -1px -1px 0 0 $bl, inset 1px 1px 0 0 $g2, inset -2px -2px 0 0 $g3, inset 2px 2px 0 0 $wh;
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-color: $g2;
+	image-rendering: pixelated;
+	background-repeat: no-repeat;
+	background-position: 65% center;
+	&:active {
+		background-position: 2px 2px;
+	}
+	&:horizontal:decrement {
+		background-image: url($lt);
+	}
+	&:horizontal:increment {
+		background-image: url($rt);
+	}
+	&:vertical:decrement {
+		background-image: url($up);
+	}
+	&:vertical:increment {
+		background-image: url($dn);
+	}
+	&:horizontal:increment:start { display: none; }
+	&:horizontal:decrement:end { display: none; }
+	&:vertical:increment:start { display: none; }
+	&:vertical:decrement:end { display: none; }
+	&:active {
+		border-top: 1px solid $g3;
+		border-left: 1px solid $g3;
+		border-bottom: 1px solid $g3;
+		border-right: 1px solid $g3;
+		box-shadow: none;
+	}
+}

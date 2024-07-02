@@ -1,0 +1,44 @@
+/* Window */
+.window {
+    border: solid 2px black;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: var(--sp-base);
+}
+.window-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 5px;
+}
+.window-body {
+    padding: 5px;
+}
+.window-controls {
+    display: flex;
+    gap: var(--sp-xs);
+
+    button {
+        cursor: pointer;
+    }
+}
+
+#welcome-exe {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    cursor: grab;
+    display: none;
+}
+
+#your-eyes {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+
+    .window-body {
+        overflow-x: scroll;
+    }
+}
