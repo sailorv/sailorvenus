@@ -1,0 +1,53 @@
+//variables 
+$primary: rgba(242, 68, 213, 1);
+$secondary: rgba(242, 68, 213, .5);
+//css
+#welcome-exe {
+    max-height: fit-content;
+
+    .window-body {
+        padding: 0;
+        height: fit-content;
+        max-height: fit-content;
+
+        .heading {
+            color: $primary;
+            text-shadow: 0 0 15px $secondary, 0 0 10px $secondary;
+            text-align: center;
+            font-family: cursive;
+        }
+
+        .interface {
+            width: 100%;
+            height: fit-content;
+            pointer-events: none;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .text {
+            background-color: black;
+            position: absolute;
+            color: #fff;
+
+            bottom: 13px;
+            left: 35px;
+            width: calc(100% - 65px);
+            height: 75px;
+            padding: 10px;
+            box-sizing: border-box;
+
+            .counter {
+                color: red;
+            }
+        }
+
+        p {
+            color: white;
+            display: block;
+            border-radius: 5;
+        }
+    }
+}

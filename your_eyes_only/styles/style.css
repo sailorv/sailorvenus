@@ -87,13 +87,6 @@ body {
   transform: rotateZ(45deg);
 }
 
-#welcome-exe .window-body p {
-  color: black;
-  background-color: rgba(255, 255, 255, 0.8);
-  display: block;
-  border-radius: 5;
-}
-
 #FAQ {
   position: absolute;
   top: 20%;
@@ -278,6 +271,7 @@ body {
   box-shadow: none;
 }
 
+/* Apps */
 #your-eyes {
   position: absolute;
   top: 10%;
@@ -299,6 +293,48 @@ body {
   position: absolute;
   bottom: 75px;
   color: #000;
+}
+
+#welcome-exe {
+  max-height: fit-content;
+}
+#welcome-exe .window-body {
+  padding: 0;
+  height: fit-content;
+  max-height: fit-content;
+}
+#welcome-exe .window-body .heading {
+  color: rgb(242, 68, 213);
+  text-shadow: 0 0 15px rgba(242, 68, 213, 0.5), 0 0 10px rgba(242, 68, 213, 0.5);
+  text-align: center;
+  font-family: cursive;
+}
+#welcome-exe .window-body .interface {
+  width: 100%;
+  height: fit-content;
+  pointer-events: none;
+}
+#welcome-exe .window-body .interface img {
+  width: 100%;
+}
+#welcome-exe .window-body .text {
+  background-color: black;
+  position: absolute;
+  color: #fff;
+  bottom: 13px;
+  left: 35px;
+  width: calc(100% - 65px);
+  height: 75px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#welcome-exe .window-body .text .counter {
+  color: red;
+}
+#welcome-exe .window-body p {
+  color: white;
+  display: block;
+  border-radius: 5;
 }
 
 /*# sourceMappingURL=style.css.map */
