@@ -1,0 +1,28 @@
+#your-eyes {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+
+    .window-header {
+        cursor: grab;
+    }
+
+    .window-body {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding: 0;
+    }
+}
+
+.thumbnails {
+
+    > .thumbnail {
+        position: relative;
+
+        .caption {
+            position: absolute;
+            bottom: 75px;
+            color: #000;
+        }
+    }   
+}

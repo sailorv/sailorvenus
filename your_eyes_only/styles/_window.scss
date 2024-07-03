@@ -1,44 +1,107 @@
 /* Window */
 .window {
+    position: absolute;
     border: solid 2px black;
     width: 600px;
+    max-height: 400px;
     display: flex;
     flex-direction: column;
     margin: var(--sp-base);
-}
-.window-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #eee;
-    padding: 5px;
-}
-.window-body {
-    padding: 5px;
-}
-.window-controls {
-    display: flex;
-    gap: var(--sp-xs);
 
-    button {
-        cursor: pointer;
+    .window-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px;
+        position: relative;
+        
+        .background {
+            background-color: #eee;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .window-title {
+        z-index: 10;
+        width: fit-content;
+        pointer-events: none;
+    }
+    
+    .window-body {
+        padding: 5px;
+        background-color: #fff;
+        max-height: calc(400px - 50px);
+    }
+    
+    .window-controls {
+        display: flex;
+        gap: var(--sp-xs);
+    }
+}
+
+.window-controls button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    margin-left: 2px;
+    width: 14px;
+    height: 14px;
+    padding: 8px 10px 10px 10px;
+    border: 0;
+    background: $g2;
+    box-shadow: inset -1px -1px 0 0 $bl, inset 1px 1px 0 0 $wh, inset -2px -2px 0 0 $g3, inset 2px 2px 0 0 $g1;
+
+    &.window-close {
+        &:before, &:after {
+            transform-origin: center center;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -4px;
+            margin-left: -1px;
+            width: 2px;
+            height: 8px;
+            background: $bl;
+        }
+        &:before {
+            transform: rotateZ(-45deg);
+        }
+        &:after {
+            transform: rotateZ(45deg);
+        }
     }
 }
 
 #welcome-exe {
-    position: absolute;
-    top: 10%;
-    left: 20%;
-    cursor: grab;
-    display: none;
+    
+    .window-body {
+
+        p {
+            color: black;
+            background-color: rgba(255,255,255,.8);
+            display: block;
+            border-radius: 5;
+        }
+    }
 }
 
-#your-eyes {
-    position: absolute;
-    top: 10%;
-    left: 20%;
-
+#FAQ {
+    position: absolute; 
+    top: 20%;
+    left: 5%;
     .window-body {
-        overflow-x: scroll;
+        background-color: #fff;
+        overflow-y: scroll;
+    }
+    h4 {
+        color: blue;
     }
 }

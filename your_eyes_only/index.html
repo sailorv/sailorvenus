@@ -8,21 +8,22 @@
     </head>
     <body>
         <div class="icon-grid">
-            <div class="icon-app">
+            <div class="icon-app" data-window="My-Computer">
                 <img src="images/My-Computer.ico">
                 My Computer
             </div>
 
-            <div class="icon-app folder">
-                Your Eyes Only
-            </div>
+            <a class="icon-app folder" data-window="blog_files">
+                <span class="folder"></span>
+                <span>Blog</span> <span>Files</span>
+            </a>
 
             <div class="icon-app">
                 <img src="images/Chat.ico">
                 Chat.exe
             </div>
 
-            <div class="icon-app">
+            <div class="icon-app" data-window="readme">
                 <img src="images/Notepad-Document.ico">
                 README
             </div>
@@ -37,18 +38,20 @@
                 Recycle Bin
             </div>
 
-            <div class="icon-app wing">
-                Your Eyes
+            <div class="icon-app wing" data-window="your-eyes">
+                <span class="wing"></span>
+                <span>Your</span> <span>Eyes</span> <span>Only</span>
             </div>
         </div>
 
 
-        <div class="window" id="readme.txt">
+        <div class="window" id="readme" style="display: none;">
             <div class="window-header">
-                <div class="window-title">README.txt</div>
+                <div class="background"></div>
+                <div class="window-title">README</div>
                 <div class="window-controls">
                     <button class="window-minimize">_</button>
-                    <button class="window-close">x</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
                 </div>
             </div>
             <div class="window-body">
@@ -58,23 +61,75 @@
             </div>
         </div>
 
-        <div class="window" id="your-eyes" style="width: 800px;">
+        <div class="window" id="My-Computer" style="display: none;">
             <div class="window-header">
+                <div class="background"></div>
+                <div class="window-title">My Computer</div>
+                <div class="window-controls">
+                    <button class="window-minimize">_</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="icon-grid">
+                    <div class="icon-app" data-window="FAQ">
+                        <img src="images/Help-Sheet.ico">
+                        FAQ
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window" id="FAQ" style="display: none;">
+            <div class="window-header">
+                <div class="background"></div>
+                <div class="window-title">Frequently Asked Questions</div>
+                <div class="window-controls">
+                    <button class="window-minimize">_</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <h4>Who are you?</h4>
+                <p>My name is Catherine, and I'm an anime fan and fashion otaku who lives in Texas.</p>
+
+                <h4>How did you build this site?</h4>
+                <p>I'm a web developer.</p>
+
+                <h4>How did you learn to sew?</h4>
+                <p>My mom taught me how to sew many years ago. I got my start making cosplay costumes for anime conventions, and didn't sew for many years later, until I was in college. Then I used sewing to make art installations while I was studying fine art.</p>
+
+                <h4>Do you have any other websites?</h4>
+                <p>Yes, <a href="http://sailorven.us" target="_blank">sailorven.us</a> and <a href="http://www.milk-experiment.net" target="_blank">milk-experiment.net</a>.</p>
+
+                <h4>Do you plan to sell the clothing you make?</h4>
+                <p>No, it's just a hobby. There are so many other amazing designers to support, and too many clothes in the world right now.</p>
+            </div>
+        </div>
+
+        <div class="window" id="your-eyes">
+            <div class="window-header">
+                <div class="background"></div>
                 <div class="window-title">Your Eyes</div>
                 <div class="window-controls">
                     <button class="window-minimize">_</button>
-                    <button class="window-close">x</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
                 </div>
             </div>
 
 
-            <div class="window-body" style="background-image: url('images/assets/gundam.png'); background-repeat: no-repeat; color: #fff; padding: 0;">
-                <div style="display: flex;">
-                    <div><img src="your_eyes_only/new_moon_300.png" height="300"></div>
-                    <div><img src="your_eyes_only/cream_300.png" height="300"></div>
-                    <div><img src="your_eyes_only/witch_300.png" height="300"></div>
-                    <div><img src="your_eyes_only/venus_300.png" height="300"></div>
-                    <div><img src="your_eyes_only/princess_300.png" height="300"></div>
+            <div class="window-body">
+                <div class="thumbnails" style="display: flex;">
+                    <div><img src="your_eyes_only/new_moon_300.png" height="375"></div>
+                    <div class="thumbnail hover">
+                        <img src="your_eyes_only/cream_300.png" height="375">
+                        <div class="caption">
+                            Info goes here
+                        </div>
+                    </div>
+                    <div><img src="your_eyes_only/witch_300.png" height="375"></div>
+                    <div><img src="your_eyes_only/venus_300.png" height="375"></div>
+                    <div><img src="your_eyes_only/princess_300.png" height="375"></div>
                     <!-- <div>
                         <p>ideas for this section:</p>
                         <ul>
@@ -89,54 +144,63 @@
             </div>
         </div>
 
-        <div class="window" id="welcome-exe">
+        <div class="window" id="welcome-exe" style="display: none;">
             <div class="window-header">
+                <div class="background"></div>
                 <div class="window-title">WELCOME.exe</div>
                 <div class="window-controls">
                     <button class="window-minimize">_</button>
-                    <button class="window-close">x</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
                 </div>
             </div>
 
 
-            <div class="window-body welcome.exe" style="background-image: url('images/assets/night_sky_pixel_art_by_zlzhang_d9hk8i1-fullview.jpg'); background-repeat: no-repeat; color: #fff;">
+            <div class="window-body" style="flex-grow:1; background-image: url('images/assets/night_sky_pixel_art_by_zlzhang_d9hk8i1-fullview.jpg'); background-repeat: no-repeat; color: #fff;">
                 <p>hello, welcome to my website. you can explore by clicking the icons on the desktop. to learn more, click README.</p>
-                <p>updates</p>
-                <p><strong>June 24, 2024</strong> this site has been updated.</p>
+                <p>Maybe this can be a dialog box with an avatar?</p>
+                <p>ideas: broken images, recycling bin is sketches</p>
+                <p>2000 people have visited this site since July 1</p>
+                <p>updates<br>
+                <strong>June 24, 2024</strong> this site has been updated.</p>
             </div>
         </div>
 
-        <div class="window" id="your_eyes_only.exe">
+        <div class="window" id="blog_files" style="display: none;">
             <div class="window-header">
-                <div class="window-title">Your Eyes Only</div>
+                <div class="background"></div>
+                <div class="window-title">Blog Files</div>
                 <div class="window-controls">
                     <button class="window-minimize">_</button>
-                    <button class="window-close">x</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
                 </div>
             </div>
             <div class="window-body">
                 <div class="icon-grid">
                     <div class="icon-app">
                         <img src="images/Drawing.ico">
-                        me.jpg
+                        image.jpg
                     </div>
         
                     <div class="icon-app">
                         <img src="images/Drawing.ico">
-                        me2.jpg
+                        image2.jpg
                     </div>
                 </div>
             </div>
         </div>
 
-        <p>ideas: broken images, winamp player, recycling bin is sketches </p>
+        <div class="winamp" style="position: absolute; bottom: 5%; right: 5%; display: none;">
+            <img src="_placeholders/winamp.png">
+        </div>
 
         <div class="start-bar">
-            <div class="button-start">Start</div>
-            <div class="button-window" id="welcome-exe-title">Welcome.exe</div>
+            <button class="button-start">Start</button>
+            <button class="button-window" id="welcome-exe-title" data-window="welcome-exe">Welcome.exe</button>
         </div>
 
         <!-- JavaScript -->
         <script src="js/window.js" type="text/JavaScript"></script>
+        <script src="js/icons.js" type="text/JavaScript"></script>
+        <script src="js/start_bar.js" type="text/JavaScript"></script>
     </body>
 </html>
