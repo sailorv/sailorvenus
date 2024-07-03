@@ -296,45 +296,84 @@ body {
 }
 
 #welcome-exe {
-  max-height: fit-content;
+  width: 804px;
+  box-sizing: border-box;
+  height: 530px;
+  max-height: 530px;
+  position: absolute;
+  top: 15%;
+  left: 25%;
 }
 #welcome-exe .window-body {
   padding: 0;
-  height: fit-content;
-  max-height: fit-content;
+  height: 500px;
+  overflow: hidden;
+  max-height: 500px;
 }
-#welcome-exe .window-body .heading {
+
+.window-body-inside {
+  padding: 0;
+  width: 800px;
+  height: fit-content;
+  position: relative;
+  font-family: "VT323", monospace;
+  font-size: 18px;
+}
+.window-body-inside .heading {
   color: rgb(242, 68, 213);
   text-shadow: 0 0 15px rgba(242, 68, 213, 0.5), 0 0 10px rgba(242, 68, 213, 0.5);
   text-align: center;
   font-family: cursive;
 }
-#welcome-exe .window-body .interface {
+.window-body-inside .interface {
   width: 100%;
   height: fit-content;
   pointer-events: none;
 }
-#welcome-exe .window-body .interface img {
+.window-body-inside .interface img {
   width: 100%;
 }
-#welcome-exe .window-body .text {
+.window-body-inside .message {
   background-color: black;
   position: absolute;
   color: #fff;
-  bottom: 13px;
-  left: 35px;
-  width: calc(100% - 65px);
-  height: 75px;
+  bottom: 20px;
+  left: 40px;
+  width: 480px;
+  height: 153px;
   padding: 10px;
   box-sizing: border-box;
+  overflow-y: scroll;
 }
-#welcome-exe .window-body .text .counter {
+.window-body-inside .message .counter {
   color: red;
 }
-#welcome-exe .window-body p {
-  color: white;
+.window-body-inside .profile-photo {
+  position: absolute;
+  top: 39px;
+  right: 40px;
+  width: 161px;
+  height: 161px;
   display: block;
-  border-radius: 5;
+  background-color: #000;
+  color: #fff;
+  overflow-y: hidden;
+  display: flex;
+}
+.window-body-inside .profile-photo > * {
+  width: 161px;
+  height: auto;
+}
+.window-body-inside .navigation {
+  position: absolute;
+  right: 50px;
+  top: 240px;
+  width: 150px;
+  height: 90px;
+  background-color: #000;
+  color: #fff;
+  padding-left: 4px;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=style.css.map */

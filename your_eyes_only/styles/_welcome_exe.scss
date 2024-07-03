@@ -3,51 +3,93 @@ $primary: rgba(242, 68, 213, 1);
 $secondary: rgba(242, 68, 213, .5);
 //css
 #welcome-exe {
-    max-height: fit-content;
+    width: 804px;
+    box-sizing: border-box;
+    height: 530px;
+    max-height: 530px;
+
+    position: absolute; top: 15%; left: 25%;
 
     .window-body {
         padding: 0;
+        height: 500px;
+        overflow: hidden;
+        max-height: 500px;
+    }
+}
+
+.window-body-inside {
+    padding: 0;
+    width: 800px;
+    height: fit-content;
+    position: relative;
+
+    font-family: "VT323", monospace;
+    font-size: 18px;
+
+    .heading {
+        color: $primary;
+        text-shadow: 0 0 15px $secondary, 0 0 10px $secondary;
+        text-align: center;
+        font-family: cursive;
+    }
+
+    .interface {
+        width: 100%;
         height: fit-content;
-        max-height: fit-content;
+        pointer-events: none;
 
-        .heading {
-            color: $primary;
-            text-shadow: 0 0 15px $secondary, 0 0 10px $secondary;
-            text-align: center;
-            font-family: cursive;
-        }
-
-        .interface {
+        img {
             width: 100%;
-            height: fit-content;
-            pointer-events: none;
-
-            img {
-                width: 100%;
-            }
         }
+    }
 
-        .text {
-            background-color: black;
-            position: absolute;
-            color: #fff;
+    .message {
+        background-color: black;
+        position: absolute;
+        color: #fff;
 
-            bottom: 13px;
-            left: 35px;
-            width: calc(100% - 65px);
-            height: 75px;
-            padding: 10px;
-            box-sizing: border-box;
+        bottom: 20px;
+        left: 40px;
+        width: 480px;
+        height: 153px;
+        padding: 10px;
+        box-sizing: border-box;
 
-            .counter {
-                color: red;
-            }
+        overflow-y: scroll;
+
+        .counter {
+            color: red;
         }
+    }
 
-        p {
-            color: white;
-            display: block;
-            border-radius: 5;
+    .profile-photo {
+        position: absolute;
+        top: 39px;
+        right: 40px;
+        width: 161px;
+        height: 161px;
+        display: block;
+        background-color: #000;
+        color: #fff;
+        overflow-y: hidden;
+        display: flex;
+
+        > * {
+            width: 161px;
+            height: auto;
         }
+    }
+
+    .navigation {
+        position: absolute;
+        right: 50px;
+        top: 240px;
+        width: 150px;
+        height: 90px;
+        background-color: #000;
+        color: #fff;
+        padding-left: 4px;
+        box-sizing: border-box;
     }
 }
