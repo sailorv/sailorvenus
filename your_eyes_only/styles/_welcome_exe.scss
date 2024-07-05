@@ -5,10 +5,13 @@ $secondary: rgba(242, 68, 213, .5);
 #welcome-exe {
     width: 804px;
     box-sizing: border-box;
-    height: 530px;
-    max-height: 530px;
+    height: fit-content;
+    max-height: fit-content;
+    display: block;
 
-    position: absolute; top: 15%; left: 25%;
+    position: absolute;
+    left: 183px; 
+    top: 114px;
 
     .window-body {
         padding: 0;
@@ -23,6 +26,7 @@ $secondary: rgba(242, 68, 213, .5);
     width: 800px;
     height: fit-content;
     position: relative;
+    overflow: hidden;
 
     font-family: "VT323", monospace;
     font-size: 18px;
@@ -52,15 +56,17 @@ $secondary: rgba(242, 68, 213, .5);
         bottom: 20px;
         left: 40px;
         width: 480px;
-        height: 153px;
-        padding: 10px;
+        height: 150px;
+        padding: 0 10px;
         box-sizing: border-box;
-
-        overflow-y: scroll;
 
         .counter {
             color: red;
         }
+    }
+
+    .typing {
+        display: none;
     }
 
     .profile-photo {
@@ -83,13 +89,66 @@ $secondary: rgba(242, 68, 213, .5);
 
     .navigation {
         position: absolute;
-        right: 50px;
-        top: 240px;
-        width: 150px;
-        height: 90px;
+        right: 40px;
+        top: 238px;
+        width: 160px;
+        height: 92px;
         background-color: #000;
         color: #fff;
-        padding-left: 4px;
+        padding: 5px;
         box-sizing: border-box;
     }
 }
+
+/* triangle */
+.pixel-triangle {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: triangle-dig 1.4s ease-in-out infinite;
+}
+
+.rec-upper,
+.rec-middle,
+.rec-lower,
+.rec-tip {
+    margin: 0 auto;
+    height: 3px;
+    background-color: #fff;
+}
+.rec-upper {
+    width: 21px;
+}
+.rec-middle {
+    width: 15px;
+}
+.rec-lower {
+    width: 9px;
+}
+.rec-tip {
+    width: 3px;
+}
+.wrapper:hover .pixel-triangle {
+    opacity: 0;
+}
+
+@keyframes triangle-dig {
+    0% {
+      transform: translate(0px, 0px)
+    }
+
+    50% {
+      transform: translate(0px, 6px)
+    }
+
+    100% {
+      transform: translate(0px, 0px)
+    }
+  }
+  
+  .has-anim {
+    transition: all .2s ease-in-out;
+    transition-delay: 10s;
+  }
+  

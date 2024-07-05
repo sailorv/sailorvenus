@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let offsetX, offsetY;
         let dragTrigger = dragElement.querySelector('.background');
 
-        zIndexCounter = 500;
+        zIndexCounter = 100;
 
         dragTrigger.addEventListener('mousedown', function(e) {
             isDragging = true;
@@ -26,12 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 dragElement.style.top = `${y}px`;
                 dragTrigger.style.cursor = 'grabbing';
                 dragTrigger.style.cursor = 'grabbing';
+                dragTrigger.style.backgroundColor = '#eee';
             }
         });
 
         document.addEventListener('mouseup', function() {
             isDragging = false;
             dragTrigger.style.cursor = 'grab';
+            dragTrigger.style.backgroundColor = '#C5C1C6';
         });
     });
 
@@ -64,11 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Add to start bar
             if (document.getElementById(windowID + '-title')) {
-                console.log('this element already exists');
+                // element already exists
             } else {
                 startBar.appendChild(windowMin);
-
-                console.log(startBar.children);
             }
 
             // Hide window from display

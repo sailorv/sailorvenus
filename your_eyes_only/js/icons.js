@@ -12,6 +12,20 @@ document.addEventListener('DOMContentLoaded', function() {
             if (windowElement) {
                 // Set the 'display' style to 'block'
                 windowElement.style.display = 'block';
+                // Set the z-index
+                windowElement.style.zIndex = '100';
+
+                //Decrease z-index of other windows
+                const windows = document.querySelectorAll('.window');
+
+                // Decrease the 'z-index' of all other boxes by 1
+                windows.forEach(function(window) {
+                    if (window.id !== windowId) {
+                        const currentZIndex = parseInt(window.style.zIndex) || 0;
+                        window.style.zIndex = currentZIndex > 1 ? currentZIndex - 1 : 0;
+                        console.log(window.id + ': ' + window.style.zIndex);
+                    }
+                });
             }
         });
     });

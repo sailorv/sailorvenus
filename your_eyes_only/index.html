@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>She said, "Don't make others suffer for your personal hatred."</title>
-        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/style.css?07052024">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
@@ -34,14 +34,43 @@
                 3½ Floppy (A:)
             </div>
 
-            <div class="icon-app">
-                <img src="images/Recycle-Bin-Empty.ico">
-                Recycle Bin
+            <div class="icon-app" data-window="Recycle-Bin">
+                <span><img src="images/Recycle-Bin-Empty.ico"></span>
+                <span>Recycle Bin</span>
             </div>
 
             <div class="icon-app wing" data-window="your-eyes">
                 <span class="wing"></span>
                 <span>Your</span> <span>Eyes</span> <span>Only</span>
+            </div>
+        </div>
+
+        <div class="window" id="readme">
+            <div class="window-header">
+                <div class="background"></div>
+                <div class="window-title">README</div>
+                <div class="window-controls">
+                    <button class="window-minimize">_</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
+                </div>
+            </div>
+            <div class="window-body">
+<pre>
+██████  ███████  █████  ██████  ███    ███ ███████ 
+██   ██ ██      ██   ██ ██   ██ ████  ████ ██      
+██████  █████   ███████ ██   ██ ██ ████ ██ █████   
+██   ██ ██      ██   ██ ██   ██ ██  ██  ██ ██      
+██   ██ ███████ ██   ██ ██████  ██      ██ ███████ 
+</pre>
+                <p>we thought the internet would solve loneliness. as technology advanced, we thought it might bridge the gap between people - between languages. <em>perhaps one day</em>, we thought, <em>it would even bridge the gap between species.</em></p>
+
+                <p>in early twenty-twenty, the limits of that theory were tested. people were thrust into complete isolation. and what we saw was that technology didn't make us less lonely - but perhaps even more lonely than before. as conspiracy proliferated, people lost empathy, connection, and a reason to care for others. instead, people used any form of communication they had to argue, to fight. all of the good that technology had accomplished was undone, and people are loneliner now than ever.</p>
+
+                <p align="center">***</p>
+
+                <p>the internet used to be cool. it used to be a place you could go to experience and see things you couldn't see anywhere else. to meet people you would never encounter in real life - freaks driven to the fringes of social circles, eager to meet nerds just like themselves.</p>
+                <p>now it's just a place to go to buy things. it's deeply unsexy - the color analysis, nervous system regulation, thinly-veiled mlm schemes. the internet isn't weird anymore.</p>
+                <p>your_eyes_only is a fashion collection, but it's also a place on the internet to get away from the bullshit.</p>
             </div>
         </div>
 
@@ -54,26 +83,28 @@
                     <button class="window-close"><span class="visually-hidden">close</span></button>
                 </div>
             </div>
-
+    
 
             <div class="window-body">
                 <iframe src="welcome_exe.html" width="800" height="500" frameborder="0"></iframe>
             </div>
         </div>
 
-        <div class="window" id="readme" style="display: none;">
+        <div class="window" id="Recycle-Bin" style="display: none;">
             <div class="window-header">
                 <div class="background"></div>
-                <div class="window-title">README</div>
+                <div class="window-title">Recycle Bin</div>
                 <div class="window-controls">
                     <button class="window-minimize">_</button>
                     <button class="window-close"><span class="visually-hidden">close</span></button>
                 </div>
             </div>
             <div class="window-body">
-                <p>the internet used to be cool. it used to be a place you could go to experience and see things you couldn't see anywhere else. to meet people you would never encounter in real life - freaks driven to the fringes of social circles, eager to meet nerds just like themselves.</p>
-                <p>now it's just a place to go to buy things. it's deeply unsexy - the color analysis, nervous system regulation, thinly-veiled mlm schemes. the internet isn't weird anymore.</p>
-                <p>your_eyes_only is a fashion collection, but it's also a place on the internet to get away from the bullshit.</p>
+                <div style="width: fit-content; text-align: center; margin: 20px auto;">
+                    <img src="images/sumomogif.gif"><br>
+                    Nothing to see here
+                </div>
+                </div>
             </div>
         </div>
 
@@ -135,27 +166,7 @@
 
 
             <div class="window-body">
-                <div class="thumbnails" style="display: flex;">
-                    <div><img src="your_eyes_only/new_moon_300.png" height="375"></div>
-                    <div class="thumbnail hover">
-                        <img src="your_eyes_only/cream_300.png" height="375">
-                        <div class="caption">
-                            Info goes here
-                        </div>
-                    </div>
-                    <div><img src="your_eyes_only/witch_300.png" height="375"></div>
-                    <div><img src="your_eyes_only/venus_300.png" height="375"></div>
-                    <div><img src="your_eyes_only/princess_300.png" height="375"></div>
-                    <!-- <div>
-                        <p>ideas for this section:</p>
-                        <ul>
-                            <li>mirrors with pictures of each outfit in them</li>
-                            <li>pixelated pictures of each dress</li>
-                            <li>or picture frames</li>
-                            <li>or space/black hole portals?</li>
-                            <li>picture of me, with thumbnails of dresses, and you can scroll through them and click the one to open in a new window</li>
-                        </ul>
-                    </div> -->
+                <iframe src="your_eyes.html" width="800" height="500" frameborder="0"></iframe>
             </div>
             </div>
         </div>
@@ -174,13 +185,24 @@
             <div class="window-body">
                 <div class="icon-grid">
                     <div class="icon-app">
+                        <span><img src="images/Web-document.ico"></span>
+                        <span>index</span>
+                        <span>.html</span>
+                    </div>
+
+                    <div class="icon-app folder">
+                        <span class="folder"></span>
+                        <span>images</span>
+                    </div>
+
+                    <div class="icon-app">
                         <img src="images/Drawing.ico">
-                        image.jpg
+                        image<br>.jpg
                     </div>
         
                     <div class="icon-app">
                         <img src="images/Drawing.ico">
-                        image2.jpg
+                        image2<br>.jpg
                     </div>
                 </div>
             </div>
@@ -191,13 +213,13 @@
         </div>
 
         <div class="start-bar">
-            <button class="button-start">Start</button>
+            <button class="button-start">Begin</button>
             <button class="button-window" id="welcome-exe-title" data-window="welcome-exe">Welcome.exe</button>
         </div>
 
         <!-- JavaScript -->
-        <script src="js/window.js" type="text/JavaScript"></script>
-        <script src="js/icons.js" type="text/JavaScript"></script>
-        <script src="js/start_bar.js" type="text/JavaScript"></script>
+        <script src="js/window.js?07052024" type="text/JavaScript"></script>
+        <script src="js/icons.js?07052024" type="text/JavaScript"></script>
+        <script src="js/start_bar.js?07052024" type="text/JavaScript"></script>
     </body>
 </html>

@@ -1,27 +1,54 @@
-body {
-  font-family: "JetBrains Mono", monospace;
-  margin: 0;
-}
-
 :root {
   --sp-base: 20px;
   --sp-xs: 10px;
+  --sp-xxs: 2px;
 }
 
 .visually-hidden {
   display: none;
 }
 
+/* Fonts */
+body {
+  font-family: "JetBrains Mono", monospace;
+  margin: 0;
+  background: url(../placeholders/wing_bg.jpg) 40% center no-repeat;
+  background-size: stretch;
+}
+
+button {
+  font-family: "JetBrains Mono", monospace;
+}
+
+#Recycle-Bin {
+  position: absolute;
+  left: 219px;
+  top: 229px;
+}
+
+#readme {
+  position: absolute;
+  left: 733px;
+  top: 23px;
+}
+
 /* Colors */
+/* Others */
 /* Window */
 .window {
   position: absolute;
-  border: solid 2px black;
   width: 600px;
   max-height: 400px;
   display: flex;
   flex-direction: column;
   margin: var(--sp-base);
+  /* border */
+  border-bottom: 2px solid #666;
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #666;
+  border-top: 2px solid #ccc;
+  background-color: #dedcde;
+  padding: 3px;
 }
 .window .window-header {
   display: flex;
@@ -29,14 +56,16 @@ body {
   justify-content: space-between;
   padding: 5px;
   position: relative;
+  cursor: grab;
 }
 .window .window-header .background {
-  background-color: #eee;
+  background-color: #dedcde;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+  box-sizing: border-box;
 }
 .window .window-title {
   z-index: 10;
@@ -47,10 +76,14 @@ body {
   padding: 5px;
   background-color: #fff;
   max-height: 350px;
+  border-left: 2px solid #666;
+  border-top: 2px solid #666;
+  border-bottom: 2px solid #ccc;
+  border-right: 2px solid #ccc;
 }
 .window .window-controls {
   display: flex;
-  gap: var(--sp-xs);
+  gap: var(--sp-xxs);
 }
 
 .window-controls button {
@@ -85,6 +118,18 @@ body {
 }
 .window-controls button.window-close:after {
   transform: rotateZ(45deg);
+}
+.window-controls button:active {
+  box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #cac6cb, inset 2px 2px 0 0 #a099a1;
+}
+
+#readme .window-body {
+  overflow-y: scroll;
+}
+#readme .window-body pre {
+  width: fit-content;
+  display: block;
+  margin: auto;
 }
 
 #FAQ {
@@ -281,9 +326,12 @@ body {
   cursor: grab;
 }
 #your-eyes .window-body {
-  overflow-x: scroll;
   overflow-y: hidden;
   padding: 0;
+}
+
+#your-eyes-iframe .window-body-inside {
+  width: 800px;
 }
 
 .thumbnails > .thumbnail {
@@ -298,11 +346,12 @@ body {
 #welcome-exe {
   width: 804px;
   box-sizing: border-box;
-  height: 530px;
-  max-height: 530px;
+  height: fit-content;
+  max-height: fit-content;
+  display: block;
   position: absolute;
-  top: 15%;
-  left: 25%;
+  left: 183px;
+  top: 114px;
 }
 #welcome-exe .window-body {
   padding: 0;
@@ -316,6 +365,7 @@ body {
   width: 800px;
   height: fit-content;
   position: relative;
+  overflow: hidden;
   font-family: "VT323", monospace;
   font-size: 18px;
 }
@@ -340,13 +390,15 @@ body {
   bottom: 20px;
   left: 40px;
   width: 480px;
-  height: 153px;
-  padding: 10px;
+  height: 150px;
+  padding: 0 10px;
   box-sizing: border-box;
-  overflow-y: scroll;
 }
 .window-body-inside .message .counter {
   color: red;
+}
+.window-body-inside .typing {
+  display: none;
 }
 .window-body-inside .profile-photo {
   position: absolute;
@@ -366,14 +418,68 @@ body {
 }
 .window-body-inside .navigation {
   position: absolute;
-  right: 50px;
-  top: 240px;
-  width: 150px;
-  height: 90px;
+  right: 40px;
+  top: 238px;
+  width: 160px;
+  height: 92px;
   background-color: #000;
   color: #fff;
-  padding-left: 4px;
+  padding: 5px;
   box-sizing: border-box;
+}
+
+/* triangle */
+.pixel-triangle {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: triangle-dig 1.4s ease-in-out infinite;
+}
+
+.rec-upper,
+.rec-middle,
+.rec-lower,
+.rec-tip {
+  margin: 0 auto;
+  height: 3px;
+  background-color: #fff;
+}
+
+.rec-upper {
+  width: 21px;
+}
+
+.rec-middle {
+  width: 15px;
+}
+
+.rec-lower {
+  width: 9px;
+}
+
+.rec-tip {
+  width: 3px;
+}
+
+.wrapper:hover .pixel-triangle {
+  opacity: 0;
+}
+
+@keyframes triangle-dig {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 6px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.has-anim {
+  transition: all 0.2s ease-in-out;
+  transition-delay: 10s;
 }
 
 /*# sourceMappingURL=style.css.map */

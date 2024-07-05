@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const windowElement = document.getElementById(windowId);
 
         startApp.addEventListener('click', function() {
-            console.log(startApps);
             // Check if the window element exists
             if (windowElement) {
                 // Set the 'display' style to 'block'
