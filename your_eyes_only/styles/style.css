@@ -13,7 +13,7 @@ body {
   font-family: "JetBrains Mono", monospace;
   margin: 0;
   background: url(../placeholders/wing_bg.jpg) 40% center no-repeat;
-  background-size: stretch;
+  background-size: 175vw;
 }
 
 button {
@@ -24,12 +24,6 @@ button {
   position: absolute;
   left: 219px;
   top: 229px;
-}
-
-#readme {
-  position: absolute;
-  left: 733px;
-  top: 23px;
 }
 
 /* Colors */
@@ -59,7 +53,7 @@ button {
   cursor: grab;
 }
 .window .window-header .background {
-  background-color: #dedcde;
+  background-color: #C5C1C6;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -123,6 +117,11 @@ button {
   box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #cac6cb, inset 2px 2px 0 0 #a099a1;
 }
 
+#readme {
+  position: absolute;
+  left: calc(90vw - 600px);
+  top: 10%;
+}
 #readme .window-body {
   overflow-y: scroll;
 }
@@ -238,6 +237,20 @@ button {
   background-image: url("../images/main_small_hover.png");
 }
 
+.icon-app .book {
+  background-image: url("../images/book_club.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 32px;
+}
+
+.icon-app:hover .book {
+  background-image: url("../images/book_club_hover.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 32px;
+}
+
 ::-webkit-scrollbar {
   width: 16px;
   height: 16px;
@@ -321,17 +334,32 @@ button {
   position: absolute;
   top: 10%;
   left: 40%;
+  width: 800px;
+  max-height: 625px;
 }
 #your-eyes .window-header {
   cursor: grab;
 }
 #your-eyes .window-body {
-  overflow-y: hidden;
+  overflow: hidden;
   padding: 0;
+  max-height: 570px;
+}
+#your-eyes .window-toolbar {
+  background-color: #dedcde;
+  padding: var(--sp-xxs) 0;
+}
+#your-eyes .window-toolbar button {
+  border: 0;
+  background-color: transparent;
+}
+#your-eyes .window-toolbar button::first-letter {
+  text-decoration: underline;
 }
 
 #your-eyes-iframe .window-body-inside {
   width: 800px;
+  overflow: hidden;
 }
 
 .thumbnails > .thumbnail {
@@ -480,6 +508,55 @@ button {
 .has-anim {
   transition: all 0.2s ease-in-out;
   transition-delay: 10s;
+}
+
+#newsletter {
+  top: 20%;
+  left: 15%;
+  display: none;
+}
+
+#newsletter .window-body {
+  background-color: #dedcde;
+  border: none;
+  font-size: 14px;
+}
+#newsletter .window-body label {
+  display: inline-block;
+}
+#newsletter .window-body label:first-letter {
+  text-decoration: underline;
+}
+
+#newsletter .window-body input {
+  background-color: #fff;
+  border: solid 1px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  margin: calc(var(--sp-xxs) * 2) 0;
+  padding: calc(var(--sp-xxs) * 2);
+  border-left: 2px solid #666;
+  border-top: 2px solid #666;
+  border-bottom: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+}
+#newsletter .window-body input:focus, #newsletter .window-body input:focus-visible {
+  box-shadow: 0 0 0 0.1rem rgba(21, 40, 224, 0.25);
+  border: solid 2px rgb(21, 40, 224) !important;
+  outline: none;
+  border-radius: 0 !important;
+}
+
+#newsletter .window-body input[type=submit] {
+  background: #cac6cb;
+  border: 0;
+  box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+  padding: var(--sp-xs);
+  cursor: pointer;
+  margin: 10px 0;
+}
+#newsletter .window-body input[type=submit]:active {
+  box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #cac6cb, inset 2px 2px 0 0 #a099a1;
 }
 
 /*# sourceMappingURL=style.css.map */

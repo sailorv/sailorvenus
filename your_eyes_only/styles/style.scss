@@ -15,7 +15,7 @@ body {
     font-family: $font-primary;
     margin: 0;
     background: url(../placeholders/wing_bg.jpg) 40% center no-repeat;
-    background-size: stretch;
+    background-size: 175vw;
 }
 
 button {
@@ -26,12 +26,6 @@ button {
     position: absolute;
     left: 219px; 
     top: 229px;
-}
-
-#readme {
-    position: absolute;
-    left: 733px;
-    top: 23px;
 }
 
 /* Colors */
@@ -59,3 +53,4 @@ $shadow-reverse: inset #{-$w*.5} #{-$w*.5} 0 0 $wh, inset #{$w*.5} #{$w*.5} 0 0 
 /* Apps */
 @import 'your_eyes_only';
 @import 'welcome_exe';
+@import 'newsletter';

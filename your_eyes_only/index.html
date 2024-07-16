@@ -16,7 +16,7 @@
 
             <a class="icon-app folder" data-window="blog_files">
                 <span class="folder"></span>
-                <span>Blog</span> <span>Files</span>
+                <span>Programs</span>
             </a>
 
             <div class="icon-app">
@@ -27,6 +27,12 @@
             <div class="icon-app" data-window="readme">
                 <img src="images/Notepad-Document.ico">
                 README
+            </div>
+
+            <div class="icon-app" data-window="newsletter">
+                <span><img src="images/Newspaper-Letter.ico"></span>
+                <span>News</span>
+                <span>Letter</span>
             </div>
 
             <div class="icon-app">
@@ -74,7 +80,7 @@
             </div>
         </div>
 
-        <div class="window" id="welcome-exe">
+        <div class="window" id="welcome-exe" style="display: none;">
             <div class="window-header">
                 <div class="background"></div>
                 <div class="window-title">WELCOME.exe</div>
@@ -120,8 +126,17 @@
             <div class="window-body">
                 <div class="icon-grid">
                     <div class="icon-app" data-window="FAQ">
-                        <img src="images/Help-Sheet.ico">
-                        FAQ
+                        <span><img src="images/Help-Sheet.ico"></span>
+                        <span>FAQ</span>
+                    </div>
+                    <div class="icon-app" data-window="contact-me">
+                        <span><img src="images/Moving-Letters.ico"></span>
+                        <span>Contact</span>
+                        <span>Me</span>
+                    </div>
+                    <div class="icon-app" data-window="site-credits">
+                        <span><img src="images/Pinned-Note.ico"></span>
+                        <span>Site</span> <span>Credits</span>
                     </div>
                 </div>
             </div>
@@ -154,19 +169,70 @@
             </div>
         </div>
 
+        <div class="window" id="contact-me" style="display: none;">
+            <div class="window-header">
+                <div class="background"></div>
+                <div class="window-title">Contact Me</div>
+                <div class="window-controls">
+                    <button class="window-minimize">_</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p style="text-align: center;">
+                    <img src="images/sumomowrite.gif" alt="gif of Sumomo writing">
+                </p>
+                <p style="text-align: center;">
+                    Email<br>
+                    <a href="mailto:sailorv@gmail.com">sailorv@gmail.com</a>
+                </p>
+                <p style="text-align: center;">
+                    Instagram<br>
+                    <a href="http://instagram.com/sailorvenusdemilo" target="_blank">@sailorvenusdemilo</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="window" id="newsletter" style="">
+            <div class="window-header">
+                <div class="background"></div>
+                <div class="window-title">Newsletter</div>
+                <div class="window-controls">
+                    <button class="window-minimize">_</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p>Currently the newsletter is still a work in progress. If you would like to receive an email for when the newsletter is ready, please enter your email address.</p>
+                <p>This will not subscribe you to the newsletter. Once the newsletter has been released, you will have a chance to view sample issues and subscribe then. This email will be a one-time notification to sign up for the Newsletter.</p>
+                <form>
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email" size="40"><br>
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" size="40"><br>
+                    <input type="submit" value="Notify me">
+                </form>
+            </div>
+        </div>
+
         <div class="window" id="your-eyes" style="display: none;">
             <div class="window-header">
                 <div class="background"></div>
-                <div class="window-title">Your Eyes</div>
+                <div class="window-title">Your Eyes Only</div>
                 <div class="window-controls">
                     <button class="window-minimize">_</button>
                     <button class="window-close"><span class="visually-hidden">close</span></button>
                 </div>
             </div>
 
+            <div class="window-toolbar">
+                <button>The Collection</button>
+                <button>About</button>
+                <button>Inspiration</button>
+            </div>
 
             <div class="window-body">
-                <iframe src="your_eyes.html" width="800" height="500" frameborder="0"></iframe>
+                <iframe src="your_eyes.html" width="800" height="570" frameborder="0"></iframe>
             </div>
             </div>
         </div>
@@ -184,26 +250,19 @@
             </div>
             <div class="window-body">
                 <div class="icon-grid">
+
                     <div class="icon-app">
                         <span><img src="images/Web-document.ico"></span>
-                        <span>index</span>
+                        <span>Blog</span>
                         <span>.html</span>
                     </div>
 
-                    <div class="icon-app folder">
-                        <span class="folder"></span>
-                        <span>images</span>
+                    <div class="icon-app">
+                        <span class="book"></span>
+                        <span>Book</span>
+                        <span>Club</span>
                     </div>
 
-                    <div class="icon-app">
-                        <img src="images/Drawing.ico">
-                        image<br>.jpg
-                    </div>
-        
-                    <div class="icon-app">
-                        <img src="images/Drawing.ico">
-                        image2<br>.jpg
-                    </div>
                 </div>
             </div>
         </div>

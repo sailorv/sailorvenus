@@ -2,14 +2,32 @@
     position: absolute;
     top: 10%;
     left: 40%;
+    width: 800px;
+    max-height: 625px;
+
 
     .window-header {
         cursor: grab;
     }
 
     .window-body {
-        overflow-y: hidden;
+        overflow: hidden;
         padding: 0;
+        max-height: 570px;
+    }
+
+    .window-toolbar {
+        background-color: $g1;
+        padding: var(--sp-xxs) 0;
+
+        button {
+            border: 0;
+            background-color: transparent;
+
+            &::first-letter {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
@@ -18,6 +36,7 @@
 
     .window-body-inside {
         width: 800px;
+        overflow: hidden;
     }
 }
 

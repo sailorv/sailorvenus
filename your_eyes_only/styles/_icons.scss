@@ -71,3 +71,16 @@
 .icon-app:hover .wing{
     background-image: url('../images/main_small_hover.png');
 }
+
+.icon-app .book {
+    background-image: url('../images/book_club.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+}
+.icon-app:hover .book {
+    background-image: url('../images/book_club_hover.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+}

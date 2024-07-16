@@ -8,14 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
         let offsetX, offsetY;
         let dragTrigger = dragElement.querySelector('.background');
 
-        zIndexCounter = 100;
+        zIndexCounter = 99;
 
         dragTrigger.addEventListener('mousedown', function(e) {
             isDragging = true;
             offsetX = e.clientX - dragElement.getBoundingClientRect().left;
             offsetY = e.clientY - dragElement.getBoundingClientRect().top;
             dragTrigger.style.cursor = 'grabbing';
-            dragElement.style.zIndex = zIndexCounter++;
+            // dragElement.style.zIndex = zIndexCounter++;
+            dragElement.style.zIndex = zIndexCounter + 2;
         });
 
         document.addEventListener('mousemove', function(e) {
