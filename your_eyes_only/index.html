@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <div class="window" id="readme">
+        <div class="window" id="readme" style="display: none;">
             <div class="window-header">
                 <div class="background"></div>
                 <div class="window-title">README</div>
@@ -267,13 +267,34 @@
             </div>
         </div>
 
+        <div class="window" id="blog">
+            <div class="window-header">
+                <div class="background"></div>
+                <div class="window-title">Web Log</div>
+                <div class="window-controls">
+                    <button class="window-minimize">_</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <iframe src="blog/post_example.html" width="611" height="400" frameborder="0"></iframe>
+            </div>
+        </div>
+
         <div class="winamp" style="position: absolute; bottom: 5%; right: 5%; display: none;">
             <img src="placeholders/winamp.png">
         </div>
 
         <div class="start-bar">
-            <button class="button-start">Begin</button>
-            <button class="button-window" id="welcome-exe-title" data-window="welcome-exe">Welcome.exe</button>
+            <div class="buttons">
+                <button class="button-start">Begin</button>
+                <button class="button-window" id="welcome-exe-title" data-window="welcome-exe">Welcome.exe</button>
+            </div>
+            <div class="status">
+                <div class="counter">Full Moon</div>
+                <div class="imood"><a href="https://www.imood.com/users/sailorvenusdemilo"><img src="https://moods.imood.com/display/uname-sailorvenusdemilo/fg-000/bg-C5C1C6/imood.gif" alt="The current mood of sailorvenusdemilo at www.imood.com" border="0"></a></div>
+            </div>
+            
         </div>
 
         <!-- JavaScript -->

@@ -131,6 +131,19 @@ button {
   margin: auto;
 }
 
+#blog {
+  position: absolute;
+  width: 615px;
+  max-height: 430px;
+  left: 300px;
+  top: 99px;
+}
+#blog .window-body {
+  overflow-y: hidden;
+  max-height: 100%;
+  padding: 0;
+}
+
 #FAQ {
   position: absolute;
   top: 20%;
@@ -155,6 +168,7 @@ button {
   background: #cac6cb;
   box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
   padding: var(--sp-xs);
+  justify-content: space-between;
 }
 
 .start-bar button {
@@ -166,6 +180,27 @@ button {
 }
 .start-bar button:active {
   box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #cac6cb, inset 2px 2px 0 0 #a099a1;
+}
+
+.status {
+  display: flex;
+  gap: var(--sp-xs);
+  margin-right: 20px;
+}
+
+.counter {
+  display: flex;
+  font-size: 8px;
+  align-items: center;
+  box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #cac6cb, inset 2px 2px 0 0 #a099a1;
+  padding: 0 10px;
+}
+
+.imood {
+  box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #cac6cb, inset 2px 2px 0 0 #a099a1;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
 }
 
 /* Icon Library */

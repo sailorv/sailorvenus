@@ -1,0 +1,259 @@
+// Typography
+@font-face {
+    font-family: 'Suisse Mono'; /*a name to be used later*/
+    src: url('https://www.stripe.press/fonts/SuisseIntlMono-Regular.otf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Cardinal Fruit';
+    src: url('https://www.stripe.press/fonts/cardinalfruitweb-regular.woff2');
+}
+
+$font: 'Suisse Mono';
+
+// Colors
+$color-bg: rgb(239, 239, 239); // Snowflake
+$color-primary: #1a1a1a; // Piano black
+$color-secondary: #444444; // Onyx
+
+/* Colors */
+$g1: lighten(#C5C1C6, 10%);
+$g2: lighten(#C5C1C6, 2%);
+$g3: darken(#C5C1C6, 15%);
+$hi: #F5C8BF;
+$wh: white;
+$bl: darken(#C5C1C6, 50%);
+$bg: #E0D2C5;
+
+// Z-index
+$zi-highest: 1000;
+
+
+body {
+    background-color: $color-bg;
+    font-family: $font;
+    color: $color-primary;
+    overflow-x: hidden;
+    
+    .body {
+        width: 50%;
+    }
+
+    .block-text-image {
+        display: flex;
+        gap: 4em;
+    }
+
+    &.new-moon {
+        color: $color-bg;
+        background-color: $color-primary;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+.cols {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    position: relative;
+
+    &.image-grid {
+        gap: 8px;
+    }
+    > .col-9 {
+        width: 75%;
+    }
+    > .col-6 {
+        width: calc(50% - 25px);
+    }
+    > .col-3 {
+        width: calc(25% - 6px);
+    }
+}
+
+.no-image {
+    display: flex;
+    background-color: #ccc;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+    > * {
+        margin: 0 auto;
+    }
+}
+
+.animation {
+    height: 230px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+spline-viewer {
+    height: 800px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subpage {
+    a.back-home {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        z-index: $zi-highest;
+    }
+    .animation-home {
+        height: 85px;
+        width: 85px;
+        margin-left: 0;
+        spline-viewer {
+            height: 200px;
+            top: 50%;
+        }
+    }    
+}
+
+.modal {
+    display: block;
+    margin: 0 auto;
+    width: 60vw;
+    border: solid black;
+    background-color: $color-bg;
+
+    &.open {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: $zi-highest;
+    }
+
+    &.closed {
+        display: none;
+    }
+
+    &__header {
+        background-color: $color-primary;
+        color: $color-bg;
+        display: flex;
+        padding: 4px;
+        justify-content: space-between;
+    }
+
+    .cols {
+        padding: 20px;
+    }
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: fit-content;
+}
+
+footer {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 2em auto;
+}
+
+// cursor
+#followCursor {
+    position: absolute;
+    pointer-events: none; /* Ensures the cursor can move freely and doesn't trigger hover effects on the 'x' */
+    transition: transform 0.1s linear; /* Smooth transition for the movement */
+}
+
+img {
+    max-width: 100%;
+}
+
+// scrollbar
+// https://codepen.io/louh/pen/oZJQvm
+
+// arrows
+$up: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGklEQVR4AWMYxuA/SYphmETFhDX9x4mHGQAAcL4P8dQiMq8AAAAASUVORK5CYII=';
+$dn: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAF0lEQVQY02NgoBf4jwJxSOHQhcNAOgMAWWAP8Rv2U3UAAAAASUVORK5CYII=';
+$lt: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAHklEQVQY02NgoBT8xyX8H5fwf1zCpOjAYwceV1EEAAO2D/HsQ4vsAAAAAElFTkSuQmCC';
+$rt: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAHUlEQVQY02NgIB/8xy3xH7fEf9wS/0nUQZqrKAYAK44P8ZRmzLQAAAAASUVORK5CYII=';
+$re: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAN0lEQVR4Ae3MgQUAMBRDwU5fFF05lb/CARTBw2Ulof0DxPtcwp3hNuEYnjbcEW4TjuFpwx3h9gMWGgZ2Y/PT2gAAAABJRU5ErkJggg==';
+
+@mixin ch {
+	background-color: $wh;
+	background-image: linear-gradient(45deg, lighten($g2, 15%) 25%, transparent 25%, transparent 75%, lighten($g2, 15%) 75%, lighten($g2, 15%)), 
+		linear-gradient(45deg, lighten($g2, 15%) 25%, transparent 25%, transparent 75%, lighten($g2, 15%) 75%, lighten($g2, 15%));
+	background-size: 2px 2px;
+	background-position: 0 0, 1px 1px
+}
+
+::-webkit-scrollbar {
+	width: 16px;
+	height: 16px;
+}
+::-webkit-scrollbar-track {
+	@include ch;
+	&:active {}
+}
+::-webkit-scrollbar-thumb {
+	box-shadow: inset -1px -1px 0 0 $bl, inset 1px 1px 0 0 $g2, inset -2px -2px 0 0 $g3, inset 2px 2px 0 0 $wh;
+	width: 16px;
+	height: 16px;
+	background-color: $g2;
+	z-index: 1;
+}
+::-webkit-scrollbar-corner {
+	background-color: $g2;
+}
+::-webkit-resizer {
+	width: 16px;
+	height: 16px;
+	background-color: $g2;
+	background-image: url($re);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	image-rendering: pixelated;
+}
+::-webkit-scrollbar-button {
+	box-shadow: inset -1px -1px 0 0 $bl, inset 1px 1px 0 0 $g2, inset -2px -2px 0 0 $g3, inset 2px 2px 0 0 $wh;
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-color: $g2;
+	image-rendering: pixelated;
+	background-repeat: no-repeat;
+	background-position: 65% center;
+	&:active {
+		background-position: 2px 2px;
+	}
+	&:horizontal:decrement {
+		background-image: url($lt);
+	}
+	&:horizontal:increment {
+		background-image: url($rt);
+	}
+	&:vertical:decrement {
+		background-image: url($up);
+	}
+	&:vertical:increment {
+		background-image: url($dn);
+	}
+	&:horizontal:increment:start { display: none; }
+	&:horizontal:decrement:end { display: none; }
+	&:vertical:increment:start { display: none; }
+	&:vertical:decrement:end { display: none; }
+	&:active {
+		border-top: 1px solid $g3;
+		border-left: 1px solid $g3;
+		border-bottom: 1px solid $g3;
+		border-right: 1px solid $g3;
+		box-shadow: none;
+	}
+}

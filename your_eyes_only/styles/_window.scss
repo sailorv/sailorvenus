@@ -114,6 +114,19 @@
     }
 }
 
+#blog {
+    position: absolute;
+    width: 615px;
+    max-height: 430px;
+    left: 300px;
+    top: 99px;
+    .window-body {
+        overflow-y: hidden;
+        max-height: 100%;
+        padding: 0;
+    }
+}
+
 #FAQ {
     position: absolute; 
     top: 20%;

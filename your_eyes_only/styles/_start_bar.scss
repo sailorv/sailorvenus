@@ -9,6 +9,7 @@
     background: $g2;
     box-shadow: $shadow;
     padding: var(--sp-xs);
+    justify-content: space-between;
 }
 
 .start-bar button {
@@ -21,4 +22,23 @@
     &:active {
         box-shadow: $shadow-reverse;
     }
+}
+
+.status {
+    display: flex;
+    gap: var(--sp-xs);
+    margin-right: 20px;
+}
+.counter {
+    display: flex;
+    font-size: 8px;
+    align-items: center;
+    box-shadow: $shadow-reverse;
+    padding: 0 10px;
+}
+.imood {
+    box-shadow: $shadow-reverse;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
 }
