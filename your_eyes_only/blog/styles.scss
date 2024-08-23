@@ -72,6 +72,9 @@ button {
     > .col-3 {
         width: calc(25% - 6px);
     }
+    > .col-4 {
+        width: calc(33% - 6px);
+    }
 }
 
 .no-image {
@@ -256,4 +259,20 @@ $re: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAN0lE
 		border-right: 1px solid $g3;
 		box-shadow: none;
 	}
+}
+
+// blog post styles 
+.serif {
+    font-family: 'cardinal fruit';
+}
+
+.serif em {
+    font-family: 'cardinalfruitweb-italic';
+}
+
+blockquote {
+    font-family: 'cardinal fruit';
+    font-size: 30pt;
+    text-align: center;
+    margin: 1em 0; padding: 0;
 }

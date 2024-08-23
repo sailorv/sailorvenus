@@ -1,0 +1,42 @@
+:root {
+    /* Color palette from https://coolors.co/palette/1c1c1c-daddd8-ecebe4-eef0f2-fafaff */
+    --color-black: #1c1c1c;
+    --color-white: #ecebe4;
+}
+@font-face {
+	font-family: Voyage;
+	src: url(../assets/fonts/85_20070_voyage-light.woff) format("woff");
+	font-style: normal;
+	font-weight: 100
+}
+@font-face {
+	font-family: Welcome;
+	src: url(../assets/fonts/Welcomeweb-Regular.woff2) format("woff2");
+	font-style: normal;
+	font-weight: 400
+}
+
+body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    display: flex;
+}
+
+.layout {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Voyage', serif;
+    font-size: 4em;
+    margin-top: .2em;
+    margin-bottom: .2em;
+    text-align: center;
+    font-weight: 100;
+}
+
+p {
+    font-family: 'Welcome', sans-serif;
+}

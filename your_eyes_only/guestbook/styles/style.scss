@@ -1,0 +1,188 @@
+/* Color palette from https://coolors.co/palette/ffd6ff-e7c6ff-c8b6ff-b8c0ff-bbd0ff
+*/
+@import url('https://fonts.googleapis.com/css?family=Sono');
+
+:root {
+    --primary-color: #BBD0FF;
+    --secondary-color: #C8B6FF;
+    --third-color: #E7C6FF;
+    --fourth-color: #FFD6FF;
+    --background-color: #BBD0FF;
+    --primary-font: 'Sono', sans-serif;
+}
+
+.inner-shine {
+    margin: 5px;
+}
+.pixelBorder--white {
+  filter: drop-shadow(-1px -1px 0 rgba(255,255,255,.3));
+  background-color: var(--primary-color);
+  --secondary-color: var(--primary-color);
+}
+
+$color-bg: var(--primary-color);
+$color-primary: var(--secondary-color);
+
+body {
+  // -webkit-font-smoothing: none;
+  // text-rendering: optimizelegibility;
+    position: relative;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: 
+    linear-gradient(
+        #b3a7f9 0 15%,
+        #beb2fa 15% 35%, 
+        #ccbafc 35% 50%,
+        #dbc4f7 50% 70%,
+        #efd3ef 70% 90%,
+        #f9dbec 90% 100%
+        );
+}
+
+.layout {
+    display: flex;
+    width: 100vw;
+    max-width: 1200px;
+    gap: 50px;
+    column-count: 2;
+    flex-wrap: wrap;
+    font-family: var(--primary-font);
+    margin: 55px auto;
+}
+
+.column {
+  width: calc(50% - 100px);
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .layout {
+    width: 100%;
+    gap: 20px;
+  }
+  .column {
+    width: calc(50% - 20px);
+  }
+}
+
+.box {
+  left: 0;
+  top: 0;
+  padding: 0 2px 0 2px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+
+.secondary {
+  background-color: var(--third-color);
+  --primary-color: var(--third-color);
+}
+
+.third {
+  background-color: var(--third-color);
+}
+
+.fourth {
+  background-color: var(--fourth-color);
+}
+
+.cell {
+  margin-bottom: 2px;
+  padding: 0 10px;
+  display: block;
+  height: fit-content;
+  position: relative;
+}
+
+.cell p {
+  margin: 0;
+}
+
+form > div {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+form > div > label {
+  width: 19%;
+}
+
+.title h2 {
+  margin: 0;
+  text-shadow: 2px 2px rgba(0,0,0, .2);
+}
+
+/**
+ * Pixel Border Mixin
+ * @param $backgroundColor Color of element background to match
+ * @param $borderColor     Color of pixel border
+ * @param $borderWidth     The width of the border in pixels, defaults to 2px
+ */
+@mixin pixelBorder($backgroundColor, $borderColor, $borderWidth: 2px) {
+  box-shadow:
+    // Background Color
+    0             (-$borderWidth * 3)  0 (-$borderWidth)     $backgroundColor,
+    0              ($borderWidth * 3)  0 (-$borderWidth)     $backgroundColor,
+    0             (-$borderWidth * 6)  0 (-$borderWidth * 2) $backgroundColor,
+    0              ($borderWidth * 6)  0 (-$borderWidth * 2) $backgroundColor,
+    0             (-$borderWidth * 9)  0 (-$borderWidth * 4) $backgroundColor,
+    0              ($borderWidth * 9)  0 (-$borderWidth * 4) $backgroundColor,
+    0             (-$borderWidth * 12) 0 (-$borderWidth * 6) $backgroundColor,
+    0              ($borderWidth * 12) 0 (-$borderWidth * 6) $backgroundColor,
+    // Border 
+  (-$borderWidth)   0                  0   0                 $borderColor,
+   ($borderWidth)   0                  0   0                 $borderColor,
+    0             (-$borderWidth * 2)  0   0                 $borderColor,
+    0              ($borderWidth * 2)  0   0                 $borderColor,
+    0             (-$borderWidth * 5)  0 (-$borderWidth)     $borderColor,
+    0              ($borderWidth * 5)  0 (-$borderWidth)     $borderColor,
+    0             (-$borderWidth * 7)  0 (-$borderWidth * 2) $borderColor,
+    0              ($borderWidth * 7)  0 (-$borderWidth * 2) $borderColor,
+    0             (-$borderWidth * 10) 0 (-$borderWidth * 4) $borderColor,
+    0              ($borderWidth * 10) 0 (-$borderWidth * 4) $borderColor,
+    0              ($borderWidth * 10) 0 (-$borderWidth * 4) $borderColor,
+    0             (-$borderWidth * 13) 0 (-$borderWidth * 6) $borderColor,
+    0              ($borderWidth * 13) 0 (-$borderWidth * 6) $borderColor;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+// Make it pixelly
+.pixelBorder {
+  transform: translateZ(0); // Safari fix
+  
+  &--2 {
+    @include pixelBorder($color-bg, $color-primary);
+  }
+  
+  &--4 {
+    @include pixelBorder($color-bg, $color-primary, 4px);
+  }
+  
+  &--6 {
+    @include pixelBorder($color-bg, $color-primary, 6px);
+  }
+  
+  &--10 {
+    @include pixelBorder($color-bg, $color-primary, 10px);
+  }
+}
+
+// Guestbook entries
+.entry--header {
+  display: flex;
+  justify-content: space-between;
+}

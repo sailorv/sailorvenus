@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>She said, "Don't make others suffer for your personal hatred."</title>
-        <link rel="stylesheet" href="styles/style.css?07052024">
+        <link rel="stylesheet" href="styles/style.css?07252024">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
                 <span>Programs</span>
             </a>
 
-            <div class="icon-app">
+            <div class="icon-app" data-window="guestbook">
                 <img src="images/Chat.ico">
                 Chat.exe
             </div>
@@ -93,6 +93,22 @@
 
             <div class="window-body">
                 <iframe src="welcome_exe.html" width="800" height="500" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <div class="window" id="moon">
+            <div class="window-header">
+                <div class="background"></div>
+                <div class="window-title">moon_phase.exe</div>
+                <div class="window-controls">
+                    <button class="window-minimize">_</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
+                </div>
+            </div>
+    
+
+            <div class="window-body">
+                <iframe src="moon/index.html" width="100%" height="315" frameborder="0"></iframe>
             </div>
         </div>
 
@@ -251,7 +267,7 @@
             <div class="window-body">
                 <div class="icon-grid">
 
-                    <div class="icon-app">
+                    <div class="icon-app" data-window="blog">
                         <span><img src="images/Web-document.ico"></span>
                         <span>Blog</span>
                         <span>.html</span>
@@ -267,7 +283,21 @@
             </div>
         </div>
 
-        <div class="window" id="blog">
+        <div class="window" id="guestbook" style="top: 3px; left: 30%; display: none;">
+            <div class="window-header">
+                <div class="background"></div>
+                <div class="window-title">Guestbook</div>
+                <div class="window-controls">
+                    <button class="window-minimize">_</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <iframe src="guestbook/index.html" width="700" height="400" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <div class="window" id="blog" style="display: none;">
             <div class="window-header">
                 <div class="background"></div>
                 <div class="window-title">Web Log</div>
@@ -291,15 +321,16 @@
                 <button class="button-window" id="welcome-exe-title" data-window="welcome-exe">Welcome.exe</button>
             </div>
             <div class="status">
-                <div class="counter">Full Moon</div>
+                <div class="counter" id="moon_phase"></div>
                 <div class="imood"><a href="https://www.imood.com/users/sailorvenusdemilo"><img src="https://moods.imood.com/display/uname-sailorvenusdemilo/fg-000/bg-C5C1C6/imood.gif" alt="The current mood of sailorvenusdemilo at www.imood.com" border="0"></a></div>
             </div>
             
         </div>
 
         <!-- JavaScript -->
-        <script src="js/window.js?07052024" type="text/JavaScript"></script>
-        <script src="js/icons.js?07052024" type="text/JavaScript"></script>
-        <script src="js/start_bar.js?07052024" type="text/JavaScript"></script>
+        <script src="js/window.js?07252024" type="text/JavaScript"></script>
+        <script src="js/icons.js?07252024" type="text/JavaScript"></script>
+        <script src="js/start_bar.js?07252024" type="text/JavaScript"></script>
+        <script src="js/moon_phase.js?07252024" type="text/JavaScript"></script>
     </body>
 </html>

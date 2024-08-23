@@ -127,6 +127,26 @@
     }
 }
 
+#guestbook {
+    width: 700px;
+    max-height: 430px;
+    .window-body {
+        overflow: hidden;
+        max-height: 100%;
+        padding: 0;
+    }
+}
+
+#moon {
+    position: absolute;
+    top: 20px;
+    right: 10%;
+    height: 350px;
+    .window-body {
+        padding: 0;
+    }
+}
+
 #FAQ {
     position: absolute; 
     top: 20%;

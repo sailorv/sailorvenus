@@ -144,6 +144,26 @@ button {
   padding: 0;
 }
 
+#guestbook {
+  width: 700px;
+  max-height: 430px;
+}
+#guestbook .window-body {
+  overflow: hidden;
+  max-height: 100%;
+  padding: 0;
+}
+
+#moon {
+  position: absolute;
+  top: 20px;
+  right: 10%;
+  height: 350px;
+}
+#moon .window-body {
+  padding: 0;
+}
+
 #FAQ {
   position: absolute;
   top: 20%;
@@ -190,10 +210,14 @@ button {
 
 .counter {
   display: flex;
-  font-size: 8px;
+  font-size: 10.5px;
   align-items: center;
+  font-family: "courier new", monospace;
   box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #cac6cb, inset 2px 2px 0 0 #a099a1;
+  text-transform: lowercase;
   padding: 0 10px;
+  -webkit-font-smoothing: none;
+  text-rendering: optimizelegibility;
 }
 
 .imood {
