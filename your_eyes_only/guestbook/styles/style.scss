@@ -1,0 +1,138 @@
+@import '../../styles/variables';
+@import '../../styles/scrollbar';
+
+body, input {
+  font-family: $font-primary;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 8px 0;
+}
+
+.layout {
+    display: flex;
+    margin: 0 auto;
+    gap: 20px;
+    column-count: 2;
+    flex-wrap: wrap;
+    font-family: var(--primary-font);
+    height: fit-content;
+    margin-bottom: 8px;
+    overflow-y: scroll;
+    height: calc(100% - 22px);
+}
+
+.column {
+  width: calc(50% - 10px);
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .layout {
+    width: 100%;
+    gap: 20px;
+  }
+  .column {
+    width: calc(50% - 20px);
+  }
+}
+
+.box {
+  left: 0;
+  top: 0;
+  padding: 8px 2px 0 2px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.cell {
+  margin-bottom: 2px;
+  padding: 0 10px;
+  display: block;
+  height: fit-content;
+  position: relative;
+
+  p {
+    margin: 0;
+  }
+}
+
+body {
+  background-color: #dedcde;
+  border: none;
+
+  label {
+      display: inline-block;
+
+      &:first-letter {
+          text-decoration: underline; 
+      }
+  }
+}
+
+form {
+  margin-top: 1em;
+}
+
+.field {
+  display: flex;
+  padding: 5px 0;
+  gap: 5px;
+  align-items: center;
+
+  :first-child {
+      width: 30%;
+      text-align: right;
+  }
+}
+
+input,
+textarea {
+  background-color: #fff;
+  border: solid 1px;
+  font-size: 14px;
+  margin: calc(var(--sp-xxs) * 2) 0;
+  padding: 4px;
+  width: 70%;
+
+  border-left: 2px solid #666;
+  border-top: 2px solid #666;
+  border-bottom: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+
+  &:focus, &:focus-visible {
+      box-shadow: 0 0 0 0.1rem $transparent-blue;
+      border: solid 2px $opaque-blue !important;
+      outline: none;
+      border-radius: 0 !important;
+  }
+}
+
+input[type=submit] {
+  background: $g2;
+  border: 0;
+  box-shadow: $shadow;
+  padding: var(--sp-xs);
+  cursor: pointer;
+  margin: 10px 0;
+
+  &:active {
+      box-shadow: $shadow-reverse;
+  }
+}
+
+.status-bar {
+  box-shadow: $shadow-reverse;
+  width: calc(100% - 11px);
+  padding: 6px;
+  position: fixed; 
+  bottom: 0; 
+  left: 0;
+  -webkit-font-smoothing: none;
+  text-rendering: optimizelegibility;
+  font-size: 10.5px;
+}

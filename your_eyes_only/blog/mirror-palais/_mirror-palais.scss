@@ -1,0 +1,102 @@
+body.mirror-palais {
+    background-color: #dedcde;
+    border: none;
+    font-size: 14px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: .5em;
+
+    a.back-home {
+        top: auto;
+        bottom: 8px;
+        position: fixed;
+    }
+
+    label {
+        display: inline-block;
+
+        &:first-letter {
+            text-decoration: underline; 
+        }
+    }
+
+    .field {
+        display: flex;
+        padding: 5px 0;
+        gap: 5px;
+
+        :first-child {
+            width: 30%;
+            text-align: right;
+        }
+    }
+
+    input {
+        background-color: #fff;
+        font-family: $font;
+        border: solid 1px;
+        font-size: 14px;
+        margin: calc(var(--sp-xxs) * 2) 0;
+        padding: 4px;
+        width: 70%;
+
+        border-left: 2px solid #666;
+        border-top: 2px solid #666;
+        border-bottom: 2px solid #ccc;
+        border-right: 2px solid #ccc;
+
+        &:focus, &:focus-visible {
+            box-shadow: 0 0 0 0.1rem $transparent-blue;
+            border: solid 2px $opaque-blue !important;
+            outline: none;
+            border-radius: 0 !important;
+        }
+    }
+
+    input[type=submit] {
+        background: $g2;
+        border: 0;
+        box-shadow: $shadow;
+        padding: var(--sp-xs);
+        cursor: pointer;
+        margin: 10px 0;
+
+        &:active {
+            box-shadow: $shadow-reverse;
+        }
+    }
+
+    fieldset {
+        margin-bottom: 1em;
+    }
+
+    a {
+        color: blue;
+        font-weight: bold;
+    }
+
+    button {
+        font-family: $font;
+    }
+
+    .windows-border {
+        border-bottom-color: rgb(192, 192, 192);
+        border-bottom-style: groove;
+        border-bottom-width: 2px;
+        border-image-outset: 0;
+        border-image-repeat: stretch;
+        border-image-slice: 100%;
+        border-image-source: none;
+        border-image-width: 1;
+        border-left-color: rgb(192, 192, 192);
+        border-left-style: groove;
+        border-left-width: 2px;
+        border-right-color: rgb(192, 192, 192);
+        border-right-style: groove;
+        border-right-width: 2px;
+        border-top-color: rgb(192, 192, 192);
+        border-top-style: groove;
+        border-top-width: 2px;
+        height: fit-content;
+    }
+}

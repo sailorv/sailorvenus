@@ -1,0 +1,130 @@
+:root {
+    /* Color palette from https://coolors.co/palette/1c1c1c-daddd8-ecebe4-eef0f2-fafaff */
+    --color-black: #1c1c1c;
+    --color-white: #ecebe4;
+    --color-sunlight: #fff;
+    --color-shadow: #1c1c1c;
+    --moon-size: 15rem;
+}
+@font-face {
+	font-family: Voyage;
+	src: url(../assets/fonts/85_20070_voyage-light.woff) format("woff");
+	font-style: normal;
+	font-weight: 100
+}
+@font-face {
+	font-family: Welcome;
+	src: url(../assets/fonts/Welcomeweb-Regular.woff2) format("woff2");
+	font-style: normal;
+	font-weight: 400
+}
+
+body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    display: flex;
+}
+
+.layout {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Voyage', serif;
+    font-size: 4em;
+    margin-top: .2em;
+    margin-bottom: .2em;
+    text-align: center;
+    font-weight: 100;
+    line-height: 1;
+}
+
+p {
+    font-family: 'Welcome', sans-serif;
+}
+
+.moon {
+    display: inline-block;
+    width: var(--moon-size);
+    height: var(--moon-size);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 0.25rem;
+    position: relative;
+
+    .moon_phase {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    &:first-of-type {
+      .light {
+        animation-delay: -2.5s;
+      }
+    }
+    
+    &:last-of-type {
+      .light {
+        animation-delay: -17.5s;
+      }
+    }
+  }
+
+.light {
+    box-sizing: border-box;
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--color-shadow);
+    border-radius: 50%;
+    filter: blur(0.25rem);
+    mix-blend-mode: screen;
+    transform: scale(0.75);
+    transform-origin: top left;
+
+    &.waning-gibbous {
+        border-left: 9rem solid var(--color-sunlight);
+        border-right-style: solid;
+        border-right-color: var(--color-shadow);
+        background-color: var(--color-sunlight);
+        transition: border-right-width 2s ease-in-out;
+    }
+
+    &.waning-crescent {
+        border-left-style: solid;
+        border-left-color: var(--color-sunlight); 
+        border-right: 10rem solid var(--color-shadow); 
+        background-color: var(--color-shadow);
+        transition: border-left-width 2s ease-in-out;
+    }
+}
+
+.texture {
+    width: var(--moon-size);
+    height: var(--moon-size);
+    border-radius: 50%;
+    background-image: url(https://www.pennlive.com/resizer/dp_dvs4Zo8pljrfn2kUqoERJ90M=/800x0/smart/image.pennlive.com/home/penn-media/width600/img/wildaboutpa/photo/14-blue-moonjpg-e541a63d92f2ed42.jpg);
+    background-position: center center;
+    background-size: 160%;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+}
+
+.sphere {
+    width: var(--moon-size);
+    height: var(--moon-size);
+    box-sizing: border-box;
+    border-radius: 50%;
+    box-shadow: inset 0 0 1em var(--color-black);
+}
+
+@import '../../styles/variables';
+@import '../../styles/scrollbar';

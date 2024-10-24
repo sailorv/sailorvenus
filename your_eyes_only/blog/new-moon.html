@@ -1,0 +1,226 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .new-moon-banner {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+
+            .new-moon-banner img {
+                mix-blend-mode: lighten;
+                opacity: 0.2;
+            }
+
+            .post-image {
+                mix-blend-mode: lighten;
+                position: relative;
+            }
+            .post-image video {
+                filter: grayscale(100%);
+                max-width: 100%;
+            }
+            .size-4-5 {
+                aspect-ratio: 4/5;
+                overflow: hidden;
+            }
+            .size-square {
+                aspect-ratio: 1/1;
+                overflow: hidden;
+                border: solid 1px rgba(255,255,255,0.2);
+            }
+            .post-image .purple {
+                background-color: purple;
+                display: block;
+                mix-blend-mode: color;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .post-image .fade {
+                background: radial-gradient(rgba(0, 0, 0, .1), #000 100%);
+                box-shadow: inset 0 0 20px 20px #000;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .size-square.post-image .fade {
+                box-shadow: inset 0 0 20px 0 #000;
+            }
+            .post-image .lines {
+                background: repeating-linear-gradient(0deg, #FFF, #fff 2px, #999 0, #FFF 4px);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                display: block;
+                left: 0;
+                mix-blend-mode: multiply;
+                opacity: .3;
+            }
+            .post-image img {
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+                mix-blend-mode: darken;
+            }
+            .post-image::after {
+                -webkit-animation: scanline 5s linear infinite;
+                animation: scanline 5s linear infinite;
+                background-color: #000;
+                background-image: linear-gradient(transparent 50%, rgba(0, 0, 0, .5) 0), linear-gradient(0deg, #1D1B28, transparent 10%);
+                background-size: 10px 10px, 100%;
+                content: " ";
+                height: 120px;
+                left: 0;
+                mix-blend-mode: screen;
+                opacity: 1;
+                position: absolute;
+                top: 0;
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+                width: 100%;
+            }
+            @keyframes scanline {
+                to {
+                    height: 100%;
+                    width: 100%
+                }
+            }
+        </style>
+
+        <!-- Fonts -->
+        <link rel="preload" href="https://www.stripe.press/fonts/SuisseIntlMono-Regular.otf" as="font" type="font/woff" crossorigin="">
+
+        <!-- Cursor -->
+        <script src="scripts/cursor.js" type="text/javascript"></script>
+    </head>
+    <body class="new-moon subpage">
+        <a href="index.html" class="back-home">
+            <div class="animation animation-home">
+            <center>
+                <script type="module" src="https://unpkg.com/@splinetool/viewer@1.1.5/build/spline-viewer.js"></script>
+                <spline-viewer url="https://prod.spline.design/Edt8WuQ3w99GT4ND/scene.splinecode"></spline-viewer>
+            </center>
+            </div>
+        </a>
+        <div class="new-moon-banner"><img src="assets/new-moon-pictures-l1k2u9mi68yfgjae.jpg" alt="new moon"></div>
+        <div class="animation">
+            <spline-viewer url="https://prod.spline.design/l3LgBMSgCKcDjbHO/scene.splinecode" style="top: 10%; height: 600px;"></spline-viewer>
+        </div>
+        <div class="cols" style="width: 80vw; margin: 0 auto">
+            <div class="col-6">
+                <p>the new moon rises and sets with the sun. the night of the new moon is one thousand times darker than that of a full moon; its darkness reminds us of calm, and encourages us to look within. symbolic of new beginnings, the new moon also represents the unknown.</p>
+
+                <p>transmission sent on 26/04/2024 9:58:00</p>
+            </div>
+            <div class="col-3 post-image size-4-5">
+                
+                <img src="assets/new-moon/closeup.jpg" width="480">
+                <div class="fade"></div>
+                <div class="lines"></div>
+            </div>
+            <div class="col-3 post-image">
+                
+                <img src="assets/black-galliano-pattern-dress.jpg" width="480">
+                <div class="fade"></div>
+                <div class="lines"></div>
+            </div>
+        </div>
+        <div class="cols" style="width: 80vw; margin: 0 auto">
+            <div class="col-2 post-image size-square">
+                
+                <img src="assets/new-moon/black-swan.jpg" width="480">
+                <div class="fade"></div>
+                <div class="lines"></div>
+            </div>
+            <div class="col-2 post-image size-square" style="mix-blend-mode: screen">
+                <video width="480" autoplay muted loop>
+                    <source src="assets/new-moon/bunny.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+                <div class="fade"></div>
+                <div class="lines"></div>
+            </div>
+            <div class="col-2 post-image size-square">
+                
+                <img src="assets/new-moon/swans.jpg" width="480">
+                <div class="fade"></div>
+                <div class="lines"></div>
+            </div>
+            <div class="col-2 post-image size-square">
+                
+                <img src="assets/new-moon/chobits-manga.jpg" width="480" style="opacity: .8">
+                <div class="fade"></div>
+                <div class="lines"></div>
+            </div>
+            <div class="col-2 post-image size-square">
+                
+                <img src="assets/new-moon/736103bcfd2e4dc425adc68ffd6442a2.jpg" width="480">
+                <div class="fade"></div>
+                <div class="lines"></div>
+            </div>
+            <div class="col-2 post-image size-square">
+                
+                <img src="assets/new-moon/star-rain.jpg" width="480">
+                <div class="fade"></div>
+                <div class="lines"></div>
+            </div>
+        </div>
+
+        <!-- section 3 -->
+        <div class="cols" style="width: 80vw; margin: 3rem auto">
+            <div class="col-6 post-image">
+                <img src="assets/new-moon/total-solar-eclipse.jpeg" width="480">
+                <div class="fade"></div>
+                <div class="lines"></div>
+            </div>
+            <div class="col-6">
+                <p>april 8, 2024</p>
+                <p>when sunlight becomes daylight in a single minute. when the stars and planets fade into view, and i realize they've been above us all day. the birds stop singing, suddenly, in reverence to the thing that has brought crowds of people into the parks in the middle of a monday.</p>
+                <p>among the most haunting events i've witnessed: the total solar eclispe over texas in 2024. </p>
+                <p>as the moon began transiting the sun, daylight dimmed. my friends and i split a bottle of wine on a patio - all the more enjoyable because none of us were at work, but participating in spooky, prehistoric revelry.</p>
+                <p>during a new moon, a solar eclipse may occur if the moon and the sun are aligned just right along the ecliptic. the more precisely the moon aligns with the sun's path, the more "total" the eclipse.</p>
+                <p>that our moon's apparent size is almost exactly that of our sun is one of the greatest cosmic wonders to me. it's as if our solar system gifted us this beautiful phenomenon, knowing we are only planet that can gaze up from our surface and appreciate it.</p>
+                <p>***</p>
+                <p>this dress was sewn using a glossy black viscose. the bust is super low, and the empire waist is cut on the bias to cling to the body.</p>
+                <p>the simplicity of this dress is what i love most about it. the pattern that I perfected while making this now forms the basis for so many other dresses I've made. this dress has imperfections, but I love it nonetheless.</p>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Section 1 -->
+        <div class="cols image-grid">
+
+            <div class="col-3">
+                <img src="assets/chobits-dress.jpg" width="480">
+            </div>
+            <div class="col-3">
+                <img src="assets/black-galliano-pattern-dress.jpg" width="480">
+            </div>
+            <div class="col-3">
+                <img src="assets/white-usagi-dress.jpg" width="480">
+            </div>
+            <div class="col-3">
+                <img src="assets/similar-to-ysl.jpg" width="480">
+            </div>
+
+        </div>
+
+        <hr>
+
+        <footer>
+            &copy; catherine
+        </footer>
+
+
+        <!-- Scripts -->
+        <script src="scripts/modal.js" type="text/javascript"></script>
+        
+    </body>
+</html>

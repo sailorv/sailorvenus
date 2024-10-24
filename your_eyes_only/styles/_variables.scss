@@ -1,0 +1,19 @@
+/* Colors */
+$g1: lighten(#C5C1C6, 10%);
+$g2: lighten(#C5C1C6, 2%);
+$g3: darken(#C5C1C6, 15%);
+$hi: #F5C8BF;
+$wh: white;
+$bl: darken(#C5C1C6, 50%);
+$bg: #E0D2C5;
+
+$opaque-blue: rgb(21, 40, 224);
+$transparent-blue: rgba(21, 40, 224, 0.25);
+
+/* Others */
+$w: 2px;
+$shadow: inset -1px -1px 0 0 $bl, inset 1px 1px 0 0 $wh, inset -2px -2px 0 0 $g3, inset 2px 2px 0 0 $g1;
+$shadow-reverse: inset #{-$w*.5} #{-$w*.5} 0 0 $wh, inset #{$w*.5} #{$w*.5} 0 0 $bl, inset #{-$w} #{-$w} 0 0 $g2, inset $w $w 0 0 $g3;
+
+/* Typography */
+$font-primary: "JetBrains Mono", monospace;
