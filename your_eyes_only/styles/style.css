@@ -8,26 +8,9 @@
   display: none;
 }
 
-/* Fonts */
-body {
-  font-family: "JetBrains Mono", monospace;
-  margin: 0;
-  background: url(../placeholders/wing_bg.jpg) 40% center no-repeat;
-  background-size: 175vw;
-}
-
-button {
-  font-family: "JetBrains Mono", monospace;
-}
-
-#Recycle-Bin {
-  position: absolute;
-  left: 219px;
-  top: 229px;
-}
-
 /* Colors */
 /* Others */
+/* Typography */
 /* Window */
 .window {
   position: absolute;
@@ -133,7 +116,7 @@ button {
 
 #blog {
   position: absolute;
-  width: 615px;
+  width: 800px;
   max-height: 430px;
   left: 300px;
   top: 99px;
@@ -152,16 +135,20 @@ button {
   overflow: hidden;
   max-height: 100%;
   padding: 0;
+  border: none;
 }
 
 #moon {
   position: absolute;
   top: 20px;
   right: 10%;
-  height: 350px;
+  width: 500px;
+  height: 435px;
+  max-height: 435px;
 }
 #moon .window-body {
   padding: 0;
+  max-height: 435px;
 }
 
 #FAQ {
@@ -208,8 +195,9 @@ button {
   margin-right: 20px;
 }
 
-.counter {
+.icon-app.counter {
   display: flex;
+  width: fit-content;
   font-size: 10.5px;
   align-items: center;
   font-family: "courier new", monospace;
@@ -305,6 +293,13 @@ button {
 
 .icon-app:hover .book {
   background-image: url("../images/book_club_hover.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 32px;
+}
+
+.icon-app .moon {
+  background-image: url("../images/moon_rotating.gif");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 32px;
@@ -616,6 +611,23 @@ button {
 }
 #newsletter .window-body input[type=submit]:active {
   box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #cac6cb, inset 2px 2px 0 0 #a099a1;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  margin: 0;
+  background: url(../placeholders/wing_bg.jpg) 40% center no-repeat;
+  background-size: 175vw;
+}
+
+button {
+  font-family: "JetBrains Mono", monospace;
+}
+
+#Recycle-Bin {
+  position: absolute;
+  left: 219px;
+  top: 229px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,39 @@
+[
+    {
+      "phase": "Dark Moon",
+      "description": "<p>The new moon rises and sets with the sun. On a night of the new moon, the sky is one thousand times darker than that of a full moon. The new moon calls us to trust in what we can't see - our instincts, our feelings, our future.</p>"
+    },
+    {
+      "phase": "New Moon",
+      "description": "<p>The new moon rises and sets with the sun. On a night of the new moon, the sky is one thousand times darker than that of a full moon. The new moon calls us to trust in what we can't see - our instincts, our feelings, our future.</p>"
+    },
+    {
+      "phase": "Waxing Crescent",
+      "description": "A sliver of the moon becomes visible as it begins to grow."
+    },
+    {
+      "phase": "First Quarter",
+      "description": "Half of the moon is illuminated and visible."
+    },
+    {
+      "phase": "Waxing Gibbous",
+      "description": "More than half of the moon is illuminated as it approaches full."
+    },
+    {
+      "phase": "Full Moon",
+      "description": "The moon is fully illuminated as it is directly opposite the sun."
+    },
+    {
+      "phase": "Waning Gibbous",
+      "description": "<p>Known as the \"Moon of Retribution,\" the Waning Gibbous symbolizes reckoning, assessment, and realization. During this time, we are reminded to reflect on the recent past, and evaluate the outcomes of what we've worked for.</p>"
+    },
+    {
+      "phase": "Last Quarter",
+      "description": "<p>Half of the moon is lit by the sun, as the moon wanes towards darkness. This is a time for letting go of anything that is not a positive force. It's a time to cease negative thoughts, and to take time for yourself.</p>",
+      "tarot": "Judgment"
+    },
+    {
+      "phase": "Waning Crescent",
+      "description": "<p>As the moon wanes, we are reminded to focus on healing. This is also a time to reset goals, and to revisit what things you want to work on in the new moon.</p>"
+    }
+]

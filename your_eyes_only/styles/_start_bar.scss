@@ -29,8 +29,9 @@
     gap: var(--sp-xs);
     margin-right: 20px;
 }
-.counter {
+.icon-app.counter {
     display: flex;
+    width: fit-content;
     font-size: 10.5px;
     align-items: center;
     font-family: 'courier new', monospace;

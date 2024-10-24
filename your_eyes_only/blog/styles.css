@@ -39,7 +39,10 @@ button {
   gap: 8px;
 }
 .cols > .col-9 {
-  width: 75%;
+  width: calc(75% - 25px);
+}
+.cols > .col-8 {
+  width: calc(67% - 25px);
 }
 .cols > .col-6 {
   width: calc(50% - 25px);
@@ -49,6 +52,28 @@ button {
 }
 .cols > .col-4 {
   width: calc(33% - 6px);
+  position: relative;
+}
+.cols > .col-4 img {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.post-description {
+  position: absolute;
+  display: none;
+  z-index: 20;
+  top: 0;
+  left: 0;
+}
+
+a:hover .post-description {
+  display: inline;
+}
+
+.sp-top {
+  margin-top: 2em;
 }
 
 .no-image {
@@ -134,6 +159,11 @@ footer {
   text-align: center;
   margin: 2em auto;
 }
+@media screen and (max-width: 800px) {
+  footer {
+    display: none;
+  }
+}
 
 #followCursor {
   position: absolute;
@@ -145,6 +175,25 @@ img {
   max-width: 100%;
 }
 
+.serif {
+  font-family: "cardinal fruit";
+}
+
+.serif em {
+  font-family: "cardinalfruitweb-italic";
+}
+
+blockquote {
+  font-family: "cardinal fruit";
+  font-size: 30pt;
+  text-align: center;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* Don't display footer in iFrame */
+/* Colors */
+/* Others */
 ::-webkit-scrollbar {
   width: 16px;
   height: 16px;
@@ -223,20 +272,102 @@ img {
   box-shadow: none;
 }
 
-.serif {
-  font-family: "cardinal fruit";
+/* posts */
+a {
+  color: #fff;
 }
 
-.serif em {
-  font-family: "cardinalfruitweb-italic";
+form input, form label {
+  cursor: pointer;
 }
 
-blockquote {
-  font-family: "cardinal fruit";
-  font-size: 30pt;
-  text-align: center;
-  margin: 1em 0;
-  padding: 0;
+body.mirror-palais {
+  background-color: #dedcde;
+  border: none;
+  font-size: 14px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0.5em;
+}
+body.mirror-palais a.back-home {
+  top: auto;
+  bottom: 8px;
+  position: fixed;
+}
+body.mirror-palais label {
+  display: inline-block;
+}
+body.mirror-palais label:first-letter {
+  text-decoration: underline;
+}
+body.mirror-palais .field {
+  display: flex;
+  padding: 5px 0;
+  gap: 5px;
+}
+body.mirror-palais .field :first-child {
+  width: 30%;
+  text-align: right;
+}
+body.mirror-palais input {
+  background-color: #fff;
+  font-family: "Suisse Mono";
+  border: solid 1px;
+  font-size: 14px;
+  margin: calc(var(--sp-xxs) * 2) 0;
+  padding: 4px;
+  width: 70%;
+  border-left: 2px solid #666;
+  border-top: 2px solid #666;
+  border-bottom: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+}
+body.mirror-palais input:focus, body.mirror-palais input:focus-visible {
+  box-shadow: 0 0 0 0.1rem rgba(21, 40, 224, 0.25);
+  border: solid 2px rgb(21, 40, 224) !important;
+  outline: none;
+  border-radius: 0 !important;
+}
+body.mirror-palais input[type=submit] {
+  background: #cac6cb;
+  border: 0;
+  box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+  padding: var(--sp-xs);
+  cursor: pointer;
+  margin: 10px 0;
+}
+body.mirror-palais input[type=submit]:active {
+  box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #cac6cb, inset 2px 2px 0 0 #a099a1;
+}
+body.mirror-palais fieldset {
+  margin-bottom: 1em;
+}
+body.mirror-palais a {
+  color: blue;
+  font-weight: bold;
+}
+body.mirror-palais button {
+  font-family: "Suisse Mono";
+}
+body.mirror-palais .windows-border {
+  border-bottom-color: rgb(192, 192, 192);
+  border-bottom-style: groove;
+  border-bottom-width: 2px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: rgb(192, 192, 192);
+  border-left-style: groove;
+  border-left-width: 2px;
+  border-right-color: rgb(192, 192, 192);
+  border-right-style: groove;
+  border-right-width: 2px;
+  border-top-color: rgb(192, 192, 192);
+  border-top-style: groove;
+  border-top-width: 2px;
+  height: fit-content;
 }
 
 /*# sourceMappingURL=styles.css.map */

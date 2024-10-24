@@ -116,7 +116,7 @@
 
 #blog {
     position: absolute;
-    width: 615px;
+    width: 800px;
     max-height: 430px;
     left: 300px;
     top: 99px;
@@ -134,6 +134,7 @@
         overflow: hidden;
         max-height: 100%;
         padding: 0;
+        border: none;
     }
 }
 
@@ -141,9 +142,13 @@
     position: absolute;
     top: 20px;
     right: 10%;
-    height: 350px;
+    width: 500px;
+    height: 435px;
+    max-height: 435px;
+
     .window-body {
         padding: 0;
+        max-height: 435px;
     }
 }
 
