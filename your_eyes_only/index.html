@@ -14,7 +14,7 @@
                 <span>My Computer</span>
             </div>
 
-            <a class="icon-app folder" data-window="blog_files">
+            <a class="icon-app folder" data-window="programs">
                 <span class="folder"></span>
                 <span>Programs</span>
             </a>
@@ -178,13 +178,13 @@
                 <p>My name is Catherine, and I'm an anime fan and fashion otaku who lives in Texas.</p>
 
                 <h4>How did you build this site?</h4>
-                <p>I'm a web developer.</p>
-
-                <h4>How did you learn to sew?</h4>
-                <p>My mom taught me how to sew many years ago. I got my start making cosplay costumes for anime conventions, and didn't sew for many years later, until I was in college. Then I used sewing to make art installations while I was studying fine art.</p>
+                <p>I'm a web developer. I began building websites when I was really young, and now I do it professionally for some of the most prestigious institutions in the world. It took me over a year to build this site, and it went through many iterations. Even as someone who does this for a living, it was incredibly painstaking and time-consuming work. </p>
 
                 <h4>Do you have any other websites?</h4>
                 <p>Yes, <a href="http://sailorven.us" target="_blank">sailorven.us</a> and <a href="http://www.milk-experiment.net" target="_blank">milk-experiment.net</a>.</p>
+
+                <h4>How did you learn to sew?</h4>
+                <p>My mom taught me how to sew many years ago. I got my start making cosplay costumes for anime conventions, and didn't sew for many years later, until I was in college. Then I used sewing to make art installations while I was studying fine art.</p>
 
                 <h4>Do you plan to sell the clothing you make?</h4>
                 <p>No, it's just a hobby. There are so many other amazing designers to support, and too many clothes in the world right now.</p>
@@ -212,6 +212,23 @@
                     Instagram<br>
                     <a href="http://instagram.com/sailorvenusdemilo" target="_blank">@sailorvenusdemilo</a>
                 </p>
+            </div>
+        </div>
+
+        <div class="window" id="site-credits" style="display: none;">
+            <div class="window-header">
+                <div class="background"></div>
+                <div class="window-title">Site Credits</div>
+                <div class="window-controls">
+                    <button class="window-minimize">_</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p>This site would not have been possible with the Web Archive and Gifcities. There are also so many more resources that are keeping the spirit of web 1.0 alive, and this site is hugely indebted to those artists. If anything has not been properly credited on this site, please contact me.</p>
+                <p><strong>Gifs and other artwork</strong>: Gifcities, <a href="https://bettysgraphics.neocities.org/">Betty's Graphics</a>, <a href="https://archive.org/details/windows-95-all-icons">Windows 95 icons</a>, <a href="https://web.archive.org/web/20091027082824/http://geocities.com/Area51/Keep/7275/">Fantasy Realms</a></p>
+                <p><strong>Tools</strong>: <a href="https://doodad.dev/dither-me-this/">Dither Me This by Doodad.dev</a></p>
+                <p><strong>HTML & CSS</strong>: Scrollbar styling, animated cursor </p>
             </div>
         </div>
 
@@ -261,7 +278,7 @@
 
         
 
-        <div class="window" id="blog_files" style="display: none;">
+        <div class="window" id="programs" style="display: none;">
             <div class="window-header">
                 <div class="background"></div>
                 <div class="window-title">Programs</div>
@@ -273,22 +290,36 @@
             <div class="window-body">
                 <div class="icon-grid">
 
-                    <div class="icon-app">
-                        <span class="book"></span>
-                        <span>Book</span>
-                        <span>Club</span>
+                    <div class="icon-app" data-window="welcome-exe">
+                        <img src="images/Notepad-Document.ico">
+                        <span>Welcome</span>
+                        <span>.exe</span>
                     </div>
-
+                    
                     <div class="icon-app" data-window="moon">
                         <span class="moon"></span>
                         <span>Moon</span>
                         <span>Phase</span>
                     </div>
 
-                    <div class="icon-app" data-window="welcome-exe">
-                        <span class="book"></span>
-                        <span>Welcome</span>
-                        <span>.exe</span>
+                    <div class="icon-app" data-window="the-library">
+                        <img src="images/black-and-white-book.gif">
+                        <span>The</span>
+                        <span>Library</span>
+                    </div>
+
+                    
+
+                    <a href="http://milk-experiment.net" target="_blank" class="icon-link"><div class="icon-app">
+                        <img src="images/Starfield.ico">
+                        <span>Milk</span>
+                        <span>Exper&hellip;</span>
+                    </div></a>
+
+                    <div class="icon-app">
+                        <img src="images/eye 6.gif">
+                        <span>Holy</span>
+                        <span>Grail</span>
                     </div>
 
                 </div>
@@ -305,7 +336,21 @@
                 </div>
             </div>
             <div class="window-body">
-                <iframe src="guestbook/index.html" width="700" height="400" frameborder="0"></iframe>
+                <iframe src="http://localhost:3000" width="700" height="400" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <div class="window" id="the-library" style="top: 20%; left: 35%; display: none;">
+            <div class="window-header">
+                <div class="background"></div>
+                <div class="window-title">The Library</div>
+                <div class="window-controls">
+                    <button class="window-minimize">_</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <iframe src="the_library/" width="700" height="400" frameborder="0"></iframe>
             </div>
         </div>
 
@@ -331,6 +376,7 @@
             <div class="buttons">
                 <button class="button-start">Begin</button>
                 <button class="button-window" id="welcome-exe-title" data-window="welcome-exe">Welcome.exe</button>
+                <div class="open-apps"></div>
             </div>
             <div class="status">
                 <div class="counter icon-app" id="moon_phase" data-window="moon"></div>

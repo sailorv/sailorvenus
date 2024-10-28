@@ -10,6 +10,12 @@
     box-shadow: $shadow;
     padding: var(--sp-xs);
     justify-content: space-between;
+
+    .buttons,
+    .buttons .open-apps {
+        display: flex;
+        gap: var(--sp-xs);
+    }
 }
 
 .start-bar button {

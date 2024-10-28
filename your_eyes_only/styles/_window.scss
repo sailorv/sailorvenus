@@ -114,6 +114,11 @@
     }
 }
 
+#programs {
+    top: 0;
+    left: 175px; 
+}
+
 #blog {
     position: absolute;
     width: 800px;
@@ -127,7 +132,8 @@
     }
 }
 
-#guestbook {
+#guestbook,
+#the-library {
     width: 700px;
     max-height: 430px;
     .window-body {
@@ -152,7 +158,8 @@
     }
 }
 
-#FAQ {
+#FAQ,
+#site-credits {
     position: absolute; 
     top: 20%;
     left: 5%;

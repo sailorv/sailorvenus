@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Minimize window
     // Hide button functionality
     let minimizeButtons = document.querySelectorAll('.window-minimize');
-    const startBar = document.querySelector('.start-bar');
+    const startBar = document.querySelector('.start-bar .open-apps');
 
     minimizeButtons.forEach(button => {
         button.addEventListener('click', function() {

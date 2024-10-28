@@ -64,6 +64,9 @@ button {
     &.image-grid {
         gap: 8px;
     }
+    > .col-12 {
+        width: 100%;
+    }
     > .col-9 {
         width: calc(75% - 25px);
     }
@@ -125,13 +128,13 @@ a:hover .post-description {
     overflow: hidden;
 }
 
-spline-viewer {
-    height: 800px;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+// spline-viewer {
+//     height: 800px;
+//     position: absolute;
+//     top: 65%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+// }
 
 .subpage {
     a.back-home {

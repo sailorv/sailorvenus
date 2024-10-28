@@ -114,6 +114,11 @@
   margin: auto;
 }
 
+#programs {
+  top: 0;
+  left: 175px;
+}
+
 #blog {
   position: absolute;
   width: 800px;
@@ -127,11 +132,13 @@
   padding: 0;
 }
 
-#guestbook {
+#guestbook,
+#the-library {
   width: 700px;
   max-height: 430px;
 }
-#guestbook .window-body {
+#guestbook .window-body,
+#the-library .window-body {
   overflow: hidden;
   max-height: 100%;
   padding: 0;
@@ -151,16 +158,19 @@
   max-height: 435px;
 }
 
-#FAQ {
+#FAQ,
+#site-credits {
   position: absolute;
   top: 20%;
   left: 5%;
 }
-#FAQ .window-body {
+#FAQ .window-body,
+#site-credits .window-body {
   background-color: #fff;
   overflow-y: scroll;
 }
-#FAQ h4 {
+#FAQ h4,
+#site-credits h4 {
   color: blue;
 }
 
@@ -176,6 +186,11 @@
   box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
   padding: var(--sp-xs);
   justify-content: space-between;
+}
+.start-bar .buttons,
+.start-bar .buttons .open-apps {
+  display: flex;
+  gap: var(--sp-xs);
 }
 
 .start-bar button {
@@ -232,6 +247,11 @@
   flex-break: after;
 }
 
+a.icon-link {
+  color: black;
+  text-decoration: none;
+}
+
 .icon-app {
   width: 64px;
   text-align: center;
@@ -282,20 +302,6 @@
 
 .icon-app:hover .wing {
   background-image: url("../images/main_small_hover.png");
-}
-
-.icon-app .book {
-  background-image: url("../images/book_club.png");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 32px;
-}
-
-.icon-app:hover .book {
-  background-image: url("../images/book_club_hover.png");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 32px;
 }
 
 .icon-app .moon {

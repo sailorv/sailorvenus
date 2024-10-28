@@ -34,12 +34,10 @@ function moonShadow(phaseInfo) {
   else if (moonAge > 22) {
     moonLightWrapper.setAttribute('class','light waning-crescent');
     moonLightCalc = -1.4 * moonAge + 40.8;
-    console.log(moonLightCalc);
     moonLightWrapper.setAttribute('style',`border-left-width: ${moonLightCalc}rem`);
   }
   else {
     moonLightWrapper.removeAttribute('style');
-    console.log(moonLight + " is less than 22");
   }
 }
 
@@ -117,7 +115,6 @@ function fetchMoonPhase(selectedDate) {
     })
     .then((json) => {
         moonShadow(json);
-        console.log(unixTimestamp);
         fetchLocalMoonData();
     })
     .catch((error) => {

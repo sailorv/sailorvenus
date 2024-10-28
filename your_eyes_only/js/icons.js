@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (window.id !== windowId) {
                         const currentZIndex = parseInt(window.style.zIndex) || 0;
                         window.style.zIndex = currentZIndex > 1 ? currentZIndex - 1 : 0;
-                        console.log(window.id + ': ' + window.style.zIndex);
+                        // console.log(window.id + ': ' + window.style.zIndex);
                     }
                 });
             }

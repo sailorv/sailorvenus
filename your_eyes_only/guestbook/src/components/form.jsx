@@ -41,16 +41,37 @@ const GuestbookForm = () => {
   };
 
   return (
-    <div>
+    <fieldset>
+      <legend>Sign the Guestbook</legend>
+      <p>Messages are moderated and may take a few days to appear on the site. Thank you for signing &lt;3</p>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Name" onChange={handleChange} value={formData.name} required />
-        <input type="email" name="email" placeholder="Email" onChange={handleChange} value={formData.email} required />
-        <input type="url" name="website" placeholder="Website" onChange={handleChange} value={formData.website} />
-        <textarea name="message" placeholder="Message" onChange={handleChange} value={formData.message} required></textarea>
-        <button type="submit">Submit</button>
+        <div className="field">
+          <label htmlFor="name">Name</label>
+          <input type="text" name="name" onChange={handleChange} value={formData.name} required />
+        </div>
+        <div className="field">
+          <label htmlFor="name">Email</label>
+          <input type="email" name="email" onChange={handleChange} value={formData.email} required />
+        </div>
+        <div className="field">
+          <label htmlFor="name">Website</label>
+          <input type="url" name="website" placeholder="http://" onChange={handleChange} value={formData.website} />
+        </div>
+        <div className="field">
+          <label htmlFor="name">Instagram</label>
+          <input type="url" name="instagram" placeholder="@" onChange={handleChange} value={formData.website} />
+        </div>
+        <div className="field">
+          <label htmlFor="message">What is your favorite part of the site?</label>
+          <textarea name="favorite" onChange={handleChange} value={formData.message} rows="5" required></textarea>
+        </div>
+        <div className="field">
+          <label htmlFor="message">Message</label>
+          <textarea name="message" onChange={handleChange} value={formData.message} rows="5" required></textarea>
+        </div>
+        <input type="submit" value="Submit" />
       </form>
-      <p>All comments are moderated and make take a while to be published.</p>
-    </div>
+    </fieldset>
   );
 };
 

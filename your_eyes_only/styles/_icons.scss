@@ -15,10 +15,17 @@
     flex-break: after;
 }
 
+a.icon-link {
+    color: black;
+    text-decoration: none;
+}
+
 .icon-app {
     width: 64px;
     text-align: center;
     font-size: 14px;
+
+    
 
     span {
         border: 1px dotted rgba(0,0,0,0);
@@ -70,19 +77,6 @@
 }
 .icon-app:hover .wing{
     background-image: url('../images/main_small_hover.png');
-}
-
-.icon-app .book {
-    background-image: url('../images/book_club.png');
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: 32px;
-}
-.icon-app:hover .book {
-    background-image: url('../images/book_club_hover.png');
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: 32px;
 }
 
 .icon-app .moon {

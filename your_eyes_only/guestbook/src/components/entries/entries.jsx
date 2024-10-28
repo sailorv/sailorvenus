@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './entries.css';
 
 const GuestbookEntries = () => {
 const [entries, setEntries] = useState([]);
@@ -11,11 +10,14 @@ useEffect(() => {
 }, []);
 
     return (
-        <div>
+        <div className="column">
             {entries.map((entry, index) => (
-                <div className="entry-wrapper" key={index}>
-                    <h3><a href="{entry.website}">{entry.name}</a></h3>
-                    <p>{entry.message}</p>
+                <div className="box">
+                    <fieldset key={index}>
+                        <legend>{index + 1}. {entry.name}</legend>
+                        <p>{entry.message}</p>
+                        <p><a href="{entry.website}">Website</a> | <a href="{entry.website}">Instagram</a></p>
+                    </fieldset>
                 </div>
             ))}
         </div>
