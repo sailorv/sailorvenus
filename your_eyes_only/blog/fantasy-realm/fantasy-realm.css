@@ -39,6 +39,9 @@ button {
 .cols.image-grid {
   gap: 8px;
 }
+.cols > .col-12 {
+  width: 100%;
+}
 .cols > .col-9 {
   width: calc(75% - 25px);
 }
@@ -93,14 +96,6 @@ a:hover .post-description {
   margin: auto;
   position: relative;
   overflow: hidden;
-}
-
-spline-viewer {
-  height: 800px;
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .subpage a.back-home {
@@ -414,6 +409,15 @@ a.back-home {
   top: 0;
   left: 0;
   transition: none;
+}
+
+.firefly {
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 0px 17px 2px #ecc45e;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=fantasy-realm.css.map */

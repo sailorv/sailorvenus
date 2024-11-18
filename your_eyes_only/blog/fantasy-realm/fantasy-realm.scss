@@ -45,5 +45,14 @@ a.back-home {
             transition: none;
         }
     }
-   
+}
+
+
+.firefly {
+    width:4px;
+    height:4px;
+    position:absolute;
+    background-color: #fff;
+    box-shadow:0px 0px 17px 2px #ecc45e;
+    border-radius: 50%;
 }
