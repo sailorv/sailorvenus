@@ -149,7 +149,8 @@ a:hover .post-description {
         margin-left: 0;
         spline-viewer {
             height: 200px;
-            top: 50%;
+            position: absolute;
+            top: -50%;
         }
     }    
 }
@@ -238,5 +239,4 @@ blockquote {
 @import '../styles/scrollbar';
 
 /* posts */
-@import 'gentle-spring/gentle-spring';
-@import 'mirror-palais/mirror-palais';
+@import 'styles/dialog';

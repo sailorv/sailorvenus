@@ -5,17 +5,36 @@ const moonLightWrapper = document.querySelector('.moon .light');
 let moonPhase;
 
 // Fetch the data for the current phase
-let date = Math.round(new Date().setHours(0,0,0,0) / 1000);
+let date = Math.round(new Date().getTime() / 1000);
 let phase = `https://api.farmsense.net/v1/moonphases/?d=${encodeURIComponent(date)}`;
+console.log(date);
 
 function moonShadow(phaseInfo) {
   moonPhase = phaseInfo[0].Phase;
+  if (moonPhase === "1st Quarter") {
+    moonPhase = "First Quarter";
+  }
   if (moonPhase === "3rd Quarter") {
     moonPhase = "Last Quarter";
   }
   moonLight = phaseInfo[0].Illumination;
   moonAge = Math.round(phaseInfo[0].Age);
+  moonAgePrecise = phaseInfo[0].Age;
   phaseName.innerText= moonPhase;
+  // Waxing Crescent
+  if ((moonAge > 1) && (moonAge < 8)) {
+    moonLightWrapper.setAttribute('class','light waxing-crescent');
+    // 7.38 days 
+    moonLightCalc = 1.35 * (moonAge - 1);
+    moonLightWrapper.setAttribute('style',`border-right-width: ${moonLightCalc}rem`);
+  }
+
+  // Waxing Gibbous
+  if ((moonAge >= 9) && (moonAge <= 14)) {
+    moonLightWrapper.setAttribute('class','light waxing-gibbous');
+    moonLightCalc = 25.03 + (-1.67 * moonAgePrecise);
+    moonLightWrapper.setAttribute('style',`border-left-width: ${moonLightCalc}rem`);
+  }
 
   // Waning Gibbous
   if ((moonAge > 14) && (moonAge < 22)) {
@@ -36,9 +55,13 @@ function moonShadow(phaseInfo) {
     moonLightCalc = -1.4 * moonAge + 40.8;
     moonLightWrapper.setAttribute('style',`border-left-width: ${moonLightCalc}rem`);
   }
-  else {
+
+  // New Moon
+  if ((moonPhase == "New Moon") || (moonPhase == "Dark Moon")) {
     moonLightWrapper.removeAttribute('style');
+    moonLightWrapper.setAttribute('class','light');
   }
+
 }
 
 fetch(phase)
@@ -94,6 +117,7 @@ document.getElementById('fetchData').addEventListener('click', function() {
   if (month && day && year) {
     // Create a date object from selected values
     const selectedDate = new Date(year, month - 1, day); // Month is zero-indexed
+    console.log(selectedDate);
 
     // Fetch moon phase data based on selected date
     fetchMoonPhase(selectedDate);
@@ -104,6 +128,7 @@ document.getElementById('fetchData').addEventListener('click', function() {
 
 function fetchMoonPhase(selectedDate) {
   let unixTimestamp = Math.round(selectedDate.getTime() / 1000);
+  console.log(unixTimestamp);
   phase = `https://api.farmsense.net/v1/moonphases/?d=${encodeURIComponent(unixTimestamp)}`;
 
   fetch(phase)

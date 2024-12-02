@@ -38,6 +38,9 @@ button {
 .cols.image-grid {
   gap: 8px;
 }
+.cols > .col-12 {
+  width: 100%;
+}
 .cols > .col-9 {
   width: calc(75% - 25px);
 }
@@ -94,14 +97,6 @@ a:hover .post-description {
   overflow: hidden;
 }
 
-spline-viewer {
-  height: 800px;
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .subpage a.back-home {
   position: absolute;
   top: 8px;
@@ -115,7 +110,8 @@ spline-viewer {
 }
 .subpage .animation-home spline-viewer {
   height: 200px;
-  top: 50%;
+  position: absolute;
+  top: -50%;
 }
 
 .modal {
@@ -194,6 +190,7 @@ blockquote {
 /* Don't display footer in iFrame */
 /* Colors */
 /* Others */
+/* Typography */
 ::-webkit-scrollbar {
   width: 16px;
   height: 16px;
@@ -273,15 +270,7 @@ blockquote {
 }
 
 /* posts */
-a {
-  color: #fff;
-}
-
-form input, form label {
-  cursor: pointer;
-}
-
-body.mirror-palais {
+body.dialog {
   background-color: #dedcde;
   border: none;
   font-size: 14px;
@@ -289,27 +278,28 @@ body.mirror-palais {
   margin: 0 auto;
   padding: 0.5em;
 }
-body.mirror-palais a.back-home {
+body.dialog a.back-home {
   top: auto;
   bottom: 8px;
   position: fixed;
 }
-body.mirror-palais label {
+body.dialog label {
   display: inline-block;
+  cursor: pointer;
 }
-body.mirror-palais label:first-letter {
+body.dialog label:first-letter {
   text-decoration: underline;
 }
-body.mirror-palais .field {
+body.dialog .field {
   display: flex;
   padding: 5px 0;
   gap: 5px;
 }
-body.mirror-palais .field :first-child {
+body.dialog .field :first-child {
   width: 30%;
   text-align: right;
 }
-body.mirror-palais input {
+body.dialog input {
   background-color: #fff;
   font-family: "Suisse Mono";
   border: solid 1px;
@@ -322,13 +312,13 @@ body.mirror-palais input {
   border-bottom: 2px solid #ccc;
   border-right: 2px solid #ccc;
 }
-body.mirror-palais input:focus, body.mirror-palais input:focus-visible {
+body.dialog input:focus, body.dialog input:focus-visible {
   box-shadow: 0 0 0 0.1rem rgba(21, 40, 224, 0.25);
   border: solid 2px rgb(21, 40, 224) !important;
   outline: none;
   border-radius: 0 !important;
 }
-body.mirror-palais input[type=submit] {
+body.dialog input[type=submit] {
   background: #cac6cb;
   border: 0;
   box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
@@ -336,20 +326,42 @@ body.mirror-palais input[type=submit] {
   cursor: pointer;
   margin: 10px 0;
 }
-body.mirror-palais input[type=submit]:active {
+body.dialog input[type=submit]:active {
   box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #cac6cb, inset 2px 2px 0 0 #a099a1;
 }
-body.mirror-palais fieldset {
+body.dialog input[type=radio], body.dialog input[type=checkbox] {
+  cursor: pointer;
+  width: 20px !important;
+  height: 0;
+  border: 0;
+  background-color: transparent;
+}
+body.dialog input[type=radio]:before, body.dialog input[type=checkbox]:before {
+  display: inline-block;
+  background: #fff;
+  content: "";
+  margin-right: 5px;
+  border: inset 2px;
+  line-height: 14px;
+  font-weight: 800;
+  text-align: center;
+  height: 15px;
+  width: 15px;
+}
+body.dialog input[type=radio]:checked:before, body.dialog input[type=checkbox]:checked:before {
+  content: "x";
+}
+body.dialog fieldset {
   margin-bottom: 1em;
 }
-body.mirror-palais a {
+body.dialog a {
   color: blue;
   font-weight: bold;
 }
-body.mirror-palais button {
+body.dialog button {
   font-family: "Suisse Mono";
 }
-body.mirror-palais .windows-border {
+body.dialog .windows-border {
   border-bottom-color: rgb(192, 192, 192);
   border-bottom-style: groove;
   border-bottom-width: 2px;
@@ -368,6 +380,10 @@ body.mirror-palais .windows-border {
   border-top-style: groove;
   border-top-width: 2px;
   height: fit-content;
+}
+
+#slideshow img[aria-hidden=true] {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

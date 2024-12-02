@@ -5,10 +5,8 @@
         <!-- Fonts -->
         <link rel="preload" href="https://www.stripe.press/fonts/SuisseIntlMono-Regular.otf" as="font" type="font/woff" crossorigin="">
 
-        <!-- Cursor -->
-        <script src="scripts/cursor.js" type="text/javascript"></script>
     </head>
-    <body class="new-moon subpage">
+    <body class="dialog subpage">
         <a href="../index.html" class="back-home">
             <div class="animation animation-home">
             <center>
@@ -17,46 +15,47 @@
             </center>
             </div>
         </a>
-        <div class="cols" style="width: 80vw; margin: 0 auto">
+        <div class="cols">
             <div class="col-8">
-                <p>Recently I had stopped in a videogame shop to find gifts for a friend, and they were selling Pokemon keychains. I selfishly and impulsively snagged one for myself, and I think it fits my tiny Louis bag perfectly.</p>
-                <p>There's only one problem: I haven't figured out what to attach to it. I'm too irresponsible to attach anything important to it, but I've been considering a vape.</p>
-                <p>What should I attach to my Eevee keychain?</p>
-                <form>
-                    <div class="field"><input type="radio" name="keychain" id="vape"> <label for="vape">Vape</label></div>
-                    <div class="field"><input type="radio" name="keychain" id="vaporeon"> <label for="vaporeon">Vaporeon keychain</label></div>
-                    <div class="field"><input type="radio" name="keychain" id="lighter"> <label for="lighter">Lighter</label></div>
-                </form>
-                <p>all is a gentle spring is one of the best emerging labels within the past few years. The <a href="https://gentlespring.co/collections/bodices-bustiers/products/the-corselette-in-wool-rich-melange">corselette in merino wool</a> is one of my favorite pieces in my closet. Every detail stands out: beautifully constructed with a scottish wool that was custom made for the brand, a sumptuous and soft lining against the skin, and perfectly placed darts along the demicup bust. </p>
+                <fieldset>
+                    <legend>Outfit details</legend>
+                    <p>Recently I had stopped in a videogame shop to find gifts for a friend, and they were selling Pokemon keychains. I selfishly and impulsively snagged one for myself, and I think it fits my tiny Louis bag perfectly.</p>
+                    <p>There's only one problem: I haven't figured out what to attach to it. I'm too irresponsible to attach anything important to it, but I've been considering a vape.</p>
+                </fieldset>
+                <fieldset>
+                    <legend>What should I attach to my Eevee keychain?</legend>
+                    <form>
+                        <div class="field"><input type="radio" name="keychain" id="vape"> <label for="vape">Vape</label></div>
+                        <div class="field"><input type="radio" name="keychain" id="vaporeon"> <label for="vaporeon">Vaporeon keychain</label></div>
+                        <div class="field"><input type="radio" name="keychain" id="lighter"> <label for="lighter">Lighter</label></div>
+                    </form>
+                </fieldset>
+                <fieldset>
+                    <legend>all is a gentle spring</legend>
+                    <p>all is a gentle spring is one of the best emerging labels within the past few years. The <a href="https://gentlespring.co/collections/bodices-bustiers/products/the-corselette-in-wool-rich-melange" target="_blank">corselette in merino wool</a> is one of my favorite pieces in my closet. Every detail stands out: beautifully constructed with a scottish wool that was custom made for the brand, a sumptuous and soft lining against the skin, and perfectly placed darts along the demicup bust. </p>
+                </fieldset>
             </div>
             <div class="col-4">
-                <img src="gentle_spring.jpg" alt="Me in a Gentle Spring top">
+                <div id="slideshow" class="sticky" style="padding-top: 8px;">
+                    <div class="windows-border" style="margin-bottom: 8px;">
+                        <img src="gentle_spring.jpg" alt="Me in a Gentle Spring top" aria-hidden="false">
+                        <img src="IMG_0069.JPG" alt="Me in a Gentle Spring corset with a Louis Vuitton bag" aria-hidden="true">
+                        <img src="IMG_0243.jpg" alt="Me in a Gentle Spring corset with a Louis Vuitton bag" aria-hidden="true">
+                        <img src="IMG_0244.jpg" alt="Me in a Gentle Spring corset with a Louis Vuitton bag" aria-hidden="true">
+                        <img src="IMG_0248.jpg" alt="Me in a Gentle Spring corset with a Louis Vuitton bag" aria-hidden="true">
+                        <img src="IMG_0249.jpg" alt="Me in a Gentle Spring corset with a Louis Vuitton bag" aria-hidden="true">
+                        <img src="IMG_0250.jpg" alt="Me in a Gentle Spring corset with a Louis Vuitton bag" aria-hidden="true">
+                    </div>
+                    <button id="previous" onclick="prevSlide()">&laquo;</button>
+                    <button id="next" onclick="nextSlide()">&raquo;</button>
+                </div>
             </div>
         </div>
-
-        <!-- Section 1 -->
-        <div class="cols image-grid sp-top">
-
-            <div class="col-3">
-                <img src="../assets/chobits-dress.jpg" width="480">
-            </div>
-            <div class="col-3">
-                <img src="../assets/black-galliano-pattern-dress.jpg" width="480">
-            </div>
-            <div class="col-3">
-                <img src="../assets/white-usagi-dress.jpg" width="480">
-            </div>
-            <div class="col-3">
-                <img src="../assets/similar-to-ysl.jpg" width="480">
-            </div>
-
-        </div>
-
-        <hr>
 
         <footer>
+            <hr>
             &copy; catherine
         </footer>
-        
+        <script src="../scripts/slideshow.js" type="text/javascript"></script>
     </body>
 </html>

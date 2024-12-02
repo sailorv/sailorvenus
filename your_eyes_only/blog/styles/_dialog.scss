@@ -1,4 +1,4 @@
-body.mirror-palais {
+body.dialog {
     background-color: #dedcde;
     border: none;
     font-size: 14px;
@@ -14,6 +14,7 @@ body.mirror-palais {
 
     label {
         display: inline-block;
+        cursor: pointer;
 
         &:first-letter {
             text-decoration: underline; 
@@ -66,6 +67,31 @@ body.mirror-palais {
         }
     }
 
+    input[type=radio], input[type=checkbox] {
+        cursor: pointer;
+        width: 20px !important;
+        height: 0;
+        border: 0;
+        background-color: transparent;
+        
+        &:before {
+            display: inline-block;
+            background: #fff;
+            content: '';
+            margin-right: 5px;
+            border: inset 2px;
+            line-height: 14px;
+            font-weight: 800;
+            text-align: center;
+            height: 15px;
+            width: 15px;
+        }
+
+        &:checked:before {
+            content: 'x';
+        }
+    }
+
     fieldset {
         margin-bottom: 1em;
     }
@@ -98,5 +124,11 @@ body.mirror-palais {
         border-top-style: groove;
         border-top-width: 2px;
         height: fit-content;
+    }
+}
+
+#slideshow {
+    img[aria-hidden=true] {
+        display: none;
     }
 }

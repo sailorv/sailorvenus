@@ -90,6 +90,22 @@ p {
     transform: scale(0.75);
     transform-origin: top left;
 
+    &.waxing-crescent {
+        border-left-style: solid;
+        border-left-color: var(--color-shadow); 
+        border-right: 10rem solid var(--color-sunlight); 
+        background-color: var(--color-shadow);
+        transition: border-right-width 2s ease-in-out;
+    }
+
+    &.waxing-gibbous {
+        border-left-style: solid;
+        border-left-color: var(--color-shadow); 
+        border-right: 10rem solid var(--color-sunlight); 
+        background-color: var(--color-sunlight);
+        transition: border-left-width 2s ease-in-out;
+    }
+
     &.waning-gibbous {
         border-left: 9rem solid var(--color-sunlight);
         border-right-style: solid;
