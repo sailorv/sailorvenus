@@ -35,7 +35,7 @@
                 <span>Letter</span>
             </div>
 
-            <div class="icon-app">
+            <div class="icon-app" data-window="outfit_browser">
                 <img src="images/Diskette-Drive.ico">
                 3½ Floppy (A:)
             </div>
@@ -54,6 +54,13 @@
                 <span><img src="images/Web-document.ico"></span>
                 <span>Blog</span>
                 <span>.html</span>
+            </div>
+
+            <div class="icon-app" data-window="fantasy_realm">
+                <img src="images/eye 6.gif">
+                <!-- Maybe Esc icon? https://bettysgraphics.neocities.org/webgraphics -->
+                <span>Fantasy</span>
+                <span>Realm</span>
             </div>
         </div>
 
@@ -114,7 +121,7 @@
     
 
             <div class="window-body">
-                <iframe src="moon/index.html" width="100%" height="400" frameborder="0"></iframe>
+                <iframe src="moon/index.html" width="100%" height="466px" frameborder="0"></iframe>
             </div>
         </div>
 
@@ -286,12 +293,6 @@
                     </div></a>
 
                     <div class="icon-app">
-                        <img src="images/eye 6.gif">
-                        <span>Holy</span>
-                        <span>Grail</span>
-                    </div>
-
-                    <div class="icon-app">
                         <img src="images/Web-documents.ico">
                         <span>Saved</span>
                         <span>Webpages</span>
@@ -312,6 +313,20 @@
             </div>
             <div class="window-body">
                 <iframe src="guestbook/index.html" width="700" height="400" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <div class="window" id="outfit_browser" style="top: 3px; left: 30%;">
+            <div class="window-header">
+                <div class="background"></div>
+                <div class="window-title">Outfit Browser</div>
+                <div class="window-controls">
+                    <button class="window-minimize">_</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <iframe src="outfit_browser/" width="700" height="400" frameborder="0"></iframe>
             </div>
         </div>
 
@@ -340,6 +355,20 @@
             </div>
             <div class="window-body">
                 <iframe src="blog/index.html" width="795" height="395" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <div class="window" id="fantasy_realm" style="display: none;">
+            <div class="window-header">
+                <div class="background"></div>
+                <div class="window-title">The Fantasy Realm</div>
+                <div class="window-controls">
+                    <button class="window-minimize">_</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <iframe src="/fantasy-realm/" width="795" height="395" frameborder="0"></iframe>
             </div>
         </div>
 

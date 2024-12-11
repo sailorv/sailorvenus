@@ -360,6 +360,22 @@ body.dialog a {
 }
 body.dialog button {
   font-family: "Suisse Mono";
+  background: #cac6cb;
+  border: 0;
+  box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+  padding: var(--sp-xs);
+  cursor: pointer;
+  padding: 6px;
+}
+body.dialog button:first-letter {
+  text-decoration: underline;
+}
+body.dialog button.wide {
+  width: 100%;
+  text-align: center;
+}
+body.dialog button:active {
+  box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #cac6cb, inset 2px 2px 0 0 #a099a1;
 }
 body.dialog .windows-border {
   border-bottom-color: rgb(192, 192, 192);

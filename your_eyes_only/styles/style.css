@@ -119,26 +119,28 @@
   left: 175px;
 }
 
-#blog {
+#blog, #fantasy_realm {
   position: absolute;
   width: 800px;
   max-height: 430px;
   left: 300px;
   top: 99px;
 }
-#blog .window-body {
+#blog .window-body, #fantasy_realm .window-body {
   overflow-y: hidden;
   max-height: 100%;
   padding: 0;
 }
 
 #guestbook,
-#the-library {
+#the-library,
+#outfit_browser {
   width: 700px;
   max-height: 430px;
 }
 #guestbook .window-body,
-#the-library .window-body {
+#the-library .window-body,
+#outfit_browser .window-body {
   overflow: hidden;
   max-height: 100%;
   padding: 0;
@@ -149,13 +151,13 @@
   position: absolute;
   top: 20px;
   right: 10%;
-  width: 500px;
-  height: 435px;
-  max-height: 435px;
+  width: 425px;
+  height: 500px;
+  max-height: 500px;
 }
 #moon .window-body {
   padding: 0;
-  max-height: 435px;
+  max-height: 500px;
 }
 
 #FAQ,

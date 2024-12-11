@@ -7,7 +7,6 @@ let moonPhase;
 // Fetch the data for the current phase
 let date = Math.round(new Date().getTime() / 1000);
 let phase = `https://api.farmsense.net/v1/moonphases/?d=${encodeURIComponent(date)}`;
-console.log(date);
 
 function moonShadow(phaseInfo) {
   moonPhase = phaseInfo[0].Phase;
@@ -117,7 +116,6 @@ document.getElementById('fetchData').addEventListener('click', function() {
   if (month && day && year) {
     // Create a date object from selected values
     const selectedDate = new Date(year, month - 1, day); // Month is zero-indexed
-    console.log(selectedDate);
 
     // Fetch moon phase data based on selected date
     fetchMoonPhase(selectedDate);
@@ -128,7 +126,6 @@ document.getElementById('fetchData').addEventListener('click', function() {
 
 function fetchMoonPhase(selectedDate) {
   let unixTimestamp = Math.round(selectedDate.getTime() / 1000);
-  console.log(unixTimestamp);
   phase = `https://api.farmsense.net/v1/moonphases/?d=${encodeURIComponent(unixTimestamp)}`;
 
   fetch(phase)

@@ -1,39 +1,39 @@
 [
     {
       "phase": "Dark Moon",
-      "description": "<p>The new moon rises and sets with the sun. On a night of the new moon, the sky is one thousand times darker than that of a full moon. The new moon calls us to trust in what we can't see - our instincts, our feelings, our future.</p>"
+      "description": "<p>The new moon rises and sets with the sun. On the night of the new moon, the sky is one thousand times darker than that of a full moon, making it the ideal phase for stargazing. The moon's synchronicity with the sun during this phase causes the ocean's tides to be higher than usual and lower than usual.</p><p>The new moon calls us to trust in what we can't see - our instincts, our feelings, our future. Its darkness symbolizes intuition and the unknown. Symbolic of new beginnings, the new moon is associated with the tarot card The Fool.</p>"
     },
     {
       "phase": "New Moon",
-      "description": "<p>The new moon rises and sets with the sun. On the night of the new moon, the sky is one thousand times darker than that of a full moon, making it the ideal phase for stargazing. The moon’s synchronicity with the sun during this phase causes the ocean’s tides to be higher than usual and lower than usual. </p><p>The new moon calls us to trust in what we can't see - our instincts, our feelings, our future. Its darkness symbolizes the unknown. Symbolic of new beginnings, the new moon is associated with the tarot card The Fool.</p>"
+      "description": "<p>The new moon rises and sets with the sun. On the night of the new moon, the sky is one thousand times darker than that of a full moon, making it the ideal phase for stargazing. The moon's synchronicity with the sun during this phase causes the ocean's tides to be higher than usual and lower than usual.</p><p>The new moon calls us to trust in what we can't see - our instincts, our feelings, our future. Its darkness symbolizes intuition and the unknown. Symbolic of new beginnings, the new moon is associated with the tarot card The Fool.</p>"
     },
     {
       "phase": "Waxing Crescent",
-      "description": "<p>The waxing crescent rises earlier in the day and sets earlier in the evening. The word “crescent” derives from a Latin word meaning to grow - and this phase is symbolic of growth, learning, and new beginnings.</p><p>This phase is for determining what decisions need to be made to bring your intentions to fruition.</p>"
+      "description": "<p>The waxing crescent rises earlier in the day and sets earlier in the evening. The word “crescent” derives from a Latin word meaning to grow - and this phase is symbolic of growth, learning, and new beginnings.</p><p>If you are someone who has set goals or intentions under the new moon, then this phase can be used to determine what decisions need to be made to bring your intentions to fruition.</p>"
     },
     {
       "phase": "First Quarter",
-      "description": "<p>Half of the moon is illuminated and visible.</p>"
+      "description": "<p>The first quarter moon rises around midday and sets around midnight. Because the first quarter moon is perpendicular to the sun, it has the smallest effect on the oceans' tides.</p><p>The name of the first quarter moon marks the completion of the first quarter of the moon's journey around the Earth.</p>"
     },
     {
       "phase": "Waxing Gibbous",
-      "description": "More than half of the moon is illuminated as it approaches full."
+      "description": "<p>As the afternoon sun approaches the horizon, the waxing gibbous moon rises in the sky. Almost all of the near side of the moon is illuminated.</p><p>Symbolically, this phase is associated with taking decisive actions towards what you want in life. In the tarot, this phase is associated with The Wheel of Fortune.</p>"
     },
     {
       "phase": "Full Moon",
-      "description": "The moon is fully illuminated as it is directly opposite the sun."
+      "description": "<p>The full moon rises at sunset and sets at sunrise, directly opposite of the sun. The entirety of the near side of the moon is illuminated. During this phase, the night sky is one thousand times brighter than that of a new moon. Symbolically, the full moon's brightness is meant to elucidate your path forward.</p><p>The full moon is a time to give thanks for your blessings in life, to recognize the things you have achieved, and to reap the benefits of your labor. It's also a time to revel in all of life's pleasures - to celebrate and commune with friends, to eat and drink. This phase is associated with energy, abundance, and fruition. In the tarot, it is represented by The Moon.</p>"
     },
     {
       "phase": "Waning Gibbous",
-      "description": "<p>Known as the \"Moon of Retribution,\" the Waning Gibbous symbolizes reckoning, assessment, and realization. During this time, we are reminded to reflect on the recent past, and evaluate the outcomes of what we've worked for.</p>"
+      "description": "<p>Known as the \"Moon of Retribution,\" the waning gibbous moon symbolizes reckoning, assessment, and realization. During this time, we are reminded to reflect on the recent past, and evaluate the outcomes of what we've worked towards or achieved. This moon rises after sunset and sets at dawn.</p>"
     },
     {
       "phase": "Last Quarter",
-      "description": "<p>Half of the moon is lit by the sun, as the moon wanes towards darkness. This is a time for letting go of anything that is not a positive force. It's a time to cease negative thoughts, and to take time for yourself.</p>",
+      "description": "<p>Half of the near side of the moon is lit by the sun, as the moon wanes towards darkness. This moon rises around midnight, and sets around noon. It can often be observed in the morning sky. The name “third quarter” marks the moon’s journey around the Earth - it has reached the last quarter of its orbit.</p><p>This phase represents a time for letting go of anything that is not a positive force. It's a time to cease negative thoughts, and to take time for yourself. It is associated with the Judgment card in the tarot.</p>",
       "tarot": "Judgment"
     },
     {
       "phase": "Waning Crescent",
-      "description": "<p>As the moon wanes, we are reminded to focus on healing. This is also a time to reset goals, and to revisit what things you want to work on in the new moon.</p>"
+      "description": "<p>The moon approaches the end of its orbit around the Earth in the waning crescent phase. Most of the near side of the moon is shrouded now in darkness, which reminds us to rest and heal.</p><p>During this phase, the moon begins to move in sync with the sun, rising just before dawn.</p>"
     }
 ]

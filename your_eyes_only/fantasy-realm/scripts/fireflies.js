@@ -3,7 +3,6 @@ https://codepen.io/slyka85/pen/BJEbVL */
 
 var fireflies = 75;
 var container = document.querySelector(".fireflies");
-console.log(container);
 var containerWidth = container.offsetWidth;
 var containerHeight = container.offsetHeight;
 var master = new TimelineMax();

@@ -103,6 +103,25 @@ body.dialog {
 
     button {
         font-family: $font;
+        background: $g2;
+        border: 0;
+        box-shadow: $shadow;
+        padding: var(--sp-xs);
+        cursor: pointer;
+        padding: 6px;
+
+        &:first-letter {
+            text-decoration: underline;
+        }
+
+        &.wide {
+            width: 100%;
+            text-align: center;
+        }
+    
+        &:active {
+            box-shadow: $shadow-reverse;
+        }
     }
 
     .windows-border {
