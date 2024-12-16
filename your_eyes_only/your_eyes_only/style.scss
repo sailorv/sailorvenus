@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    background-color: #666;
+    display: flex;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.interface {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    z-index: 1000;
+    
+    img {
+        width: 794px;
+    }
+
+    .overlay {
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .row-1 {
+        display: flex;
+        margin-top: 34px;
+        margin-left: 19px;
+        gap: 18px;
+    }
+
+    .row-2 {
+        display: flex;
+        margin-top: 29px;
+        margin-left: 19px;
+        gap: 18px;
+    }
+
+    .thumb {
+        width: 137px;
+        height: 176px;
+        overflow: hidden;
+        
+
+        img {
+            width: 100%;
+        }
+
+        &:hover {
+        }
+    }
+
+}

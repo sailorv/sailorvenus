@@ -258,6 +258,7 @@ a.icon-link {
   width: 64px;
   text-align: center;
   font-size: 14px;
+  position: relative;
 }
 .icon-app span {
   border: 1px dotted rgba(0, 0, 0, 0);
@@ -272,6 +273,18 @@ a.icon-link {
 .icon-app:active span {
   background-color: rgba(21, 40, 224, 0.25);
   border: dotted 1px rgb(21, 40, 224);
+}
+.icon-app.new::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  background-image: url("https://sailorven.us/assets/new-fire.gif");
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .icon-app img {
