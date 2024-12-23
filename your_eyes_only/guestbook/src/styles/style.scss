@@ -1,14 +1,14 @@
 @import '../../../styles/variables';
 @import '../../../styles/scrollbar';
 
-body, input {
+body, input, button {
   font-family: $font-primary;
   font-size: 14px;
-  overflow-x: hidden;
 }
 
 body {
-  margin: 8px 0;
+  margin: 8px auto;
+  max-width: 700px;
 }
 
 .layout {
@@ -20,7 +20,6 @@ body {
     font-family: var(--primary-font);
     height: fit-content;
     margin-bottom: 8px;
-    overflow-y: scroll;
     height: calc(100% - 22px);
 }
 
@@ -40,13 +39,16 @@ body {
 }
 
 .box {
-  left: 0;
-  top: 0;
   padding: 8px 2px 0 2px;
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
-  position: relative;
+
+  &.form {
+    position: sticky;
+    width: 100%;
+    top: 0;
+  }
 }
 
 .cell {
@@ -114,6 +116,7 @@ textarea {
 
 .status-bar {
   box-shadow: $shadow-reverse;
+  background-color: #dedcde;
   width: calc(100% - 11px);
   padding: 6px;
   position: fixed; 
@@ -124,7 +127,14 @@ textarea {
   font-size: 10.5px;
 }
 
-input[type=submit] {
+.buttons {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+  margin: 0 0 0 auto;
+}
+
+button {
   background: $g2;
   border: 0;
   box-shadow: $shadow;
@@ -133,7 +143,6 @@ input[type=submit] {
   margin: 10px 0;
   width: fit-content;
   padding: 10px;
-  float: right;
   
   &:first-letter {
     text-decoration: underline; 

@@ -1,16 +1,16 @@
 // Typography
 
-@font-face {
-    font-family: 'Suisse Mono'; /*a name to be used later*/
-    src: url('https://www.stripe.press/fonts/SuisseIntlMono-Regular.otf'); /*URL to font*/
-}
+// @font-face {
+//     font-family: 'Suisse Mono'; /*a name to be used later*/
+//     src: url('https://www.stripe.press/fonts/SuisseIntlMono-Regular.otf'); /*URL to font*/
+// }
 
 @font-face {
     font-family: 'Cardinal Fruit';
     src: url('https://www.stripe.press/fonts/cardinalfruitweb-regular.woff2');
 }
 
-$font: 'Suisse Mono';
+$font: "JetBrains Mono", monospace;
 
 // Colors
 $color-bg: rgb(239, 239, 239); // Snowflake
@@ -73,8 +73,20 @@ button {
     > .col-8 {
         width: calc(67% - 25px);
     }
+    > .col-7 {
+        width: calc(58% - 12.5px);
+    }
     > .col-6 {
         width: calc(50% - 25px);
+    }
+    > .col-5 {
+        width: calc(42% - 12.5px);
+
+        img {
+            aspect-ratio: 4/6.4;
+            overflow:hidden;
+            object-fit: cover;
+        }
     }
     > .col-3 {
         width: calc(25% - 6px);
@@ -84,7 +96,7 @@ button {
         position: relative;
 
         img {
-            aspect-ratio: 4/5;
+            aspect-ratio: 4/6;
             overflow:hidden;
             object-fit: cover;
         }

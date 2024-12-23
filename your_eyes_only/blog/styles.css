@@ -1,15 +1,11 @@
 @font-face {
-  font-family: "Suisse Mono"; /*a name to be used later*/
-  src: url("https://www.stripe.press/fonts/SuisseIntlMono-Regular.otf"); /*URL to font*/
-}
-@font-face {
   font-family: "Cardinal Fruit";
   src: url("https://www.stripe.press/fonts/cardinalfruitweb-regular.woff2");
 }
 /* Colors */
 body {
   background-color: rgb(239, 239, 239);
-  font-family: "Suisse Mono";
+  font-family: "JetBrains Mono", monospace;
   color: #1a1a1a;
   overflow-x: hidden;
 }
@@ -47,8 +43,19 @@ button {
 .cols > .col-8 {
   width: calc(67% - 25px);
 }
+.cols > .col-7 {
+  width: calc(58% - 12.5px);
+}
 .cols > .col-6 {
   width: calc(50% - 25px);
+}
+.cols > .col-5 {
+  width: calc(42% - 12.5px);
+}
+.cols > .col-5 img {
+  aspect-ratio: 4/6.4;
+  overflow: hidden;
+  object-fit: cover;
 }
 .cols > .col-3 {
   width: calc(25% - 6px);
@@ -58,7 +65,7 @@ button {
   position: relative;
 }
 .cols > .col-4 img {
-  aspect-ratio: 4/5;
+  aspect-ratio: 4/6;
   overflow: hidden;
   object-fit: cover;
 }
@@ -301,7 +308,7 @@ body.dialog .field :first-child {
 }
 body.dialog input {
   background-color: #fff;
-  font-family: "Suisse Mono";
+  font-family: "JetBrains Mono", monospace;
   border: solid 1px;
   font-size: 14px;
   margin: calc(var(--sp-xxs) * 2) 0;
@@ -359,7 +366,7 @@ body.dialog a {
   font-weight: bold;
 }
 body.dialog button {
-  font-family: "Suisse Mono";
+  font-family: "JetBrains Mono", monospace;
   background: #cac6cb;
   border: 0;
   box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;

@@ -119,28 +119,51 @@
   left: 175px;
 }
 
-#blog, #fantasy_realm {
+#blog {
   position: absolute;
   width: 800px;
   max-height: 430px;
   left: 300px;
   top: 99px;
 }
-#blog .window-body, #fantasy_realm .window-body {
+#blog .window-body {
+  overflow-y: hidden;
+  max-height: 100%;
+  padding: 0;
+}
+
+#fantasy_realm {
+  position: absolute;
+  width: 800px;
+  max-height: 510px;
+  left: 250px;
+  top: 75px;
+}
+#fantasy_realm .window-body {
   overflow-y: hidden;
   max-height: 100%;
   padding: 0;
 }
 
 #guestbook,
-#the-library,
-#outfit_browser {
+#the-library {
   width: 700px;
   max-height: 430px;
 }
 #guestbook .window-body,
-#the-library .window-body,
-#outfit_browser .window-body {
+#the-library .window-body {
+  overflow: hidden;
+  max-height: 100%;
+  padding: 0;
+  border: none;
+}
+
+#soft_wear {
+  width: 700px;
+  max-height: 530px;
+  height: 530px;
+}
+#soft_wear .window-body {
   overflow: hidden;
   max-height: 100%;
   padding: 0;

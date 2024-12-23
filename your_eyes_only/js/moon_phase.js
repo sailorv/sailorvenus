@@ -10,7 +10,10 @@ fetch(phase)
         return response.json();
     })
     .then((json) => {
-        const moonPhase = json[0].Phase;
+        let moonPhase = json[0].Phase;
+        if (moonPhase == "3rd quarter") {
+            moonPhase = "last quarter moon";
+        }
         document.getElementById('moon_phase').innerHTML= moonPhase;
     })
     .catch((error) => {

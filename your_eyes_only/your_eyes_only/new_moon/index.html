@@ -1,6 +1,7 @@
 <html>
     <head>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="/blog/styles.css">
+        <link rel="stylesheet" href="../style.css">
         <style>
             .new-moon-banner {
                 position: absolute;
@@ -86,6 +87,9 @@
                 transform: translateZ(0);
                 width: 100%;
             }
+            .col-2 {
+                width: 30%;
+            }
             @keyframes scanline {
                 to {
                     height: 100%;
@@ -96,52 +100,40 @@
 
         <!-- Fonts -->
         <link rel="preload" href="https://www.stripe.press/fonts/SuisseIntlMono-Regular.otf" as="font" type="font/woff" crossorigin="">
-
-        <!-- Cursor -->
-        <script src="scripts/cursor.js" type="text/javascript"></script>
     </head>
     <body class="new-moon subpage">
-        <a href="index.html" class="back-home">
-            <div class="animation animation-home">
-            <center>
-                <script type="module" src="https://unpkg.com/@splinetool/viewer@1.1.5/build/spline-viewer.js"></script>
-                <spline-viewer url="https://prod.spline.design/Edt8WuQ3w99GT4ND/scene.splinecode"></spline-viewer>
-            </center>
-            </div>
-        </a>
-        <div class="new-moon-banner"><img src="assets/new-moon-pictures-l1k2u9mi68yfgjae.jpg" alt="new moon"></div>
-        <div class="animation">
-            <spline-viewer url="https://prod.spline.design/l3LgBMSgCKcDjbHO/scene.splinecode" style="top: 10%; height: 600px;"></spline-viewer>
-        </div>
-        <div class="cols" style="width: 80vw; margin: 0 auto">
+        <a href="../../your_eyes.html">Home</a>
+        <div class="new-moon-banner"><img src="new-moon-pictures-l1k2u9mi68yfgjae.jpg" alt="new moon"></div>
+        <div class="cols" style="max-width: 800px; margin: 0 auto">
             <div class="col-6">
                 <p>the new moon rises and sets with the sun. the night of the new moon is one thousand times darker than that of a full moon; its darkness reminds us of calm, and encourages us to look within. symbolic of new beginnings, the new moon also represents the unknown.</p>
 
                 <p>transmission sent on 26/04/2024 9:58:00</p>
             </div>
-            <div class="col-3 post-image size-4-5">
-                
-                <img src="assets/new-moon/closeup.jpg" width="480">
-                <div class="fade"></div>
-                <div class="lines"></div>
-            </div>
-            <div class="col-3 post-image">
-                
-                <img src="assets/black-galliano-pattern-dress.jpg" width="480">
-                <div class="fade"></div>
-                <div class="lines"></div>
+            <div class="col-6" style="position: relative;">
+                <div id="slideshow" class="post-image size-4-5" style="padding-top: 8px;">
+                    <img src="black-galliano-pattern-dress.jpg" width="480" aria-hidden="false">
+                    <img src="closeup.jpg" width="480" aria-hidden="true">
+                    <div class="fade"></div>
+                    <div class="lines"></div>
+                </div>
+                <div class="controls">
+                    <a href="black-galliano-pattern-dress.jpg" target="_blank">Open Image in New Window <span>&UpperRightArrow;</span></a>
+                    <button id="previous" onclick="prevSlide()"><span>&laquo;</span> Previous</button>
+                    <button id="next" onclick="nextSlide()">Next <span>&raquo;</span></button>
+                </div>
             </div>
         </div>
-        <div class="cols" style="width: 80vw; margin: 0 auto">
+        <div class="cols" style="max-width: 800px; margin: 0 auto">
             <div class="col-2 post-image size-square">
                 
-                <img src="assets/new-moon/black-swan.jpg" width="480">
+                <img src="black-swan.jpg" width="480">
                 <div class="fade"></div>
                 <div class="lines"></div>
             </div>
             <div class="col-2 post-image size-square" style="mix-blend-mode: screen">
                 <video width="480" autoplay muted loop>
-                    <source src="assets/new-moon/bunny.mp4" type="video/mp4">
+                    <source src="bunny.mp4" type="video/mp4">
                     Your browser does not support video.
                 </video>
                 <div class="fade"></div>
@@ -149,34 +141,34 @@
             </div>
             <div class="col-2 post-image size-square">
                 
-                <img src="assets/new-moon/swans.jpg" width="480">
+                <img src="swans.jpg" width="480">
                 <div class="fade"></div>
                 <div class="lines"></div>
             </div>
             <div class="col-2 post-image size-square">
                 
-                <img src="assets/new-moon/chobits-manga.jpg" width="480" style="opacity: .8">
+                <img src="chobits-manga.jpg" width="480" style="opacity: .8">
                 <div class="fade"></div>
                 <div class="lines"></div>
             </div>
             <div class="col-2 post-image size-square">
                 
-                <img src="assets/new-moon/736103bcfd2e4dc425adc68ffd6442a2.jpg" width="480">
+                <img src="736103bcfd2e4dc425adc68ffd6442a2.jpg" width="480">
                 <div class="fade"></div>
                 <div class="lines"></div>
             </div>
             <div class="col-2 post-image size-square">
                 
-                <img src="assets/new-moon/star-rain.jpg" width="480">
+                <img src="star-rain.jpg" width="480">
                 <div class="fade"></div>
                 <div class="lines"></div>
             </div>
         </div>
 
         <!-- section 3 -->
-        <div class="cols" style="width: 80vw; margin: 3rem auto">
-            <div class="col-6 post-image">
-                <img src="assets/new-moon/total-solar-eclipse.jpeg" width="480">
+        <div class="cols" style="max-width: 800px; margin: 3rem auto">
+            <div class="col-6 post-image" style="height: fit-content;">
+                <img src="total-solar-eclipse.jpeg" width="480">
                 <div class="fade"></div>
                 <div class="lines"></div>
             </div>
@@ -192,28 +184,12 @@
                 <p>the simplicity of this dress is what i love most about it. the pattern that I perfected while making this now forms the basis for so many other dresses I've made. this dress has imperfections, but I love it nonetheless.</p>
             </div>
         </div>
-        <hr>
 
-        <!-- Section 1 -->
-        <div class="cols image-grid">
-
-            <div class="col-3">
-                <img src="assets/chobits-dress.jpg" width="480">
-            </div>
-            <div class="col-3">
-                <img src="assets/black-galliano-pattern-dress.jpg" width="480">
-            </div>
-            <div class="col-3">
-                <img src="assets/white-usagi-dress.jpg" width="480">
-            </div>
-            <div class="col-3">
-                <img src="assets/similar-to-ysl.jpg" width="480">
-            </div>
-
-        </div>
         <footer>
             <hr>
             &copy; catherine
         </footer>
+
+        <script src="/js/slideshow.js" type="text/javascript"></script>
     </body>
 </html>
