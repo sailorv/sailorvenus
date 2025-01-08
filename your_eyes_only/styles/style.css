@@ -449,10 +449,17 @@ a.icon-link {
 }
 #your-eyes .window-toolbar button {
   border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 14px;
   background-color: transparent;
 }
-#your-eyes .window-toolbar button::first-letter {
-  text-decoration: underline;
+#your-eyes .window-toolbar button:first-letter {
+  text-decoration: underline !important;
+}
+#your-eyes .window-toolbar button:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 #your-eyes-iframe .window-body-inside {
@@ -476,8 +483,8 @@ a.icon-link {
   max-height: fit-content;
   display: block;
   position: absolute;
-  left: 183px;
-  top: 114px;
+  left: 20%;
+  top: 2%;
 }
 #welcome-exe .window-body {
   padding: 0;
@@ -614,19 +621,22 @@ a.icon-link {
   display: none;
 }
 
-#newsletter .window-body {
+#newsletter .window-body,
+#goku_patrol .window-body {
   background-color: #dedcde;
   border: none;
   font-size: 14px;
 }
-#newsletter .window-body label {
+#newsletter .window-body label,
+#goku_patrol .window-body label {
   display: inline-block;
 }
-#newsletter .window-body label:first-letter {
+#newsletter .window-body label:first-letter,
+#goku_patrol .window-body label:first-letter {
   text-decoration: underline;
 }
-
-#newsletter .window-body input {
+#newsletter .window-body input,
+#goku_patrol .window-body input {
   background-color: #fff;
   border: solid 1px;
   font-family: "JetBrains Mono", monospace;
@@ -638,14 +648,17 @@ a.icon-link {
   border-bottom: 2px solid #ccc;
   border-right: 2px solid #ccc;
 }
-#newsletter .window-body input:focus, #newsletter .window-body input:focus-visible {
+#newsletter .window-body input:focus, #newsletter .window-body input:focus-visible,
+#goku_patrol .window-body input:focus,
+#goku_patrol .window-body input:focus-visible {
   box-shadow: 0 0 0 0.1rem rgba(21, 40, 224, 0.25);
   border: solid 2px rgb(21, 40, 224) !important;
   outline: none;
   border-radius: 0 !important;
 }
-
-#newsletter .window-body input[type=submit] {
+#newsletter .window-body input[type=submit], #newsletter .window-body button,
+#goku_patrol .window-body input[type=submit],
+#goku_patrol .window-body button {
   background: #cac6cb;
   border: 0;
   box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
@@ -653,7 +666,14 @@ a.icon-link {
   cursor: pointer;
   margin: 10px 0;
 }
-#newsletter .window-body input[type=submit]:active {
+#newsletter .window-body input[type=submit]::first-letter, #newsletter .window-body button::first-letter,
+#goku_patrol .window-body input[type=submit]::first-letter,
+#goku_patrol .window-body button::first-letter {
+  text-decoration: underline;
+}
+#newsletter .window-body input[type=submit]:active, #newsletter .window-body button:active,
+#goku_patrol .window-body input[type=submit]:active,
+#goku_patrol .window-body button:active {
   box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #cac6cb, inset 2px 2px 0 0 #a099a1;
 }
 
@@ -672,6 +692,35 @@ button {
   position: absolute;
   left: 219px;
   top: 229px;
+}
+
+/* Goku */
+#goku {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  overflow: hidden;
+  bottom: 60px;
+  display: none;
+}
+
+#goku img {
+  left: 0;
+  position: relative;
+  animation: goku 24s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes goku {
+  0% {
+    left: 0;
+  }
+  30% {
+    left: 110%;
+  }
+  100% {
+    left: 110%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

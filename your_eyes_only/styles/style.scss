@@ -35,3 +35,32 @@ button {
     left: 219px; 
     top: 229px;
 }
+
+/* Goku */
+#goku {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    overflow: hidden;
+    bottom: 60px;
+    display: none;
+}
+#goku img {
+    left: 0;
+    position: relative;
+    animation: goku 24s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes goku
+{
+    0% {
+        left: 0;
+    }
+    30% {
+        left: 110%;
+    }
+    100% {
+        left: 110%;
+    }
+}

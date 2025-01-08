@@ -15,6 +15,9 @@ body {
 .interface img {
   width: 794px;
 }
+.interface .back-home img {
+  width: auto;
+}
 .interface .overlay {
   position: absolute;
   pointer-events: none;

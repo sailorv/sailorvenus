@@ -56,18 +56,18 @@
                 <span>Wear</span>
             </div>
 
-            <div class="icon-app" data-window="blog">
+            <!-- <div class="icon-app" data-window="blog">
                 <span><img src="images/Web-document.ico"></span>
                 <span>Blog</span>
                 <span>.html</span>
-            </div>
+            </div> -->
 
-            <div class="icon-app" data-window="fantasy_realm">
+            <!-- <div class="icon-app" data-window="fantasy_realm">
                 <span><img src="images/esc.gif"></span>
-                <!-- Maybe Esc icon? https://bettysgraphics.neocities.org/webgraphics -->
+                <!--  https://bettysgraphics.neocities.org/webgraphics
                 <span>Fantasy</span>
                 <span>Realm</span>
-            </div>
+            </div> -->
         </div>
 
         <div class="window" id="readme" style="display: none;">
@@ -107,7 +107,7 @@ hormonal and unpredictable. </p>
             </div>
         </div>
 
-        <div class="window" id="welcome-exe" style="display: none;">
+        <div class="window" id="welcome-exe">
             <div class="window-header">
                 <div class="background"></div>
                 <div class="window-title">WELCOME.exe</div>
@@ -139,7 +139,7 @@ hormonal and unpredictable. </p>
             </div>
         </div>
 
-        <div class="window" id="Under-Construction" style="display: none;">
+        <div class="window" id="Under-Construction" style="display: none; width:400px; left: 10%; top: 30%;">
             <div class="window-header">
                 <div class="background"></div>
                 <div class="window-title">Under Construction</div>
@@ -152,6 +152,27 @@ hormonal and unpredictable. </p>
                 <div style="width: fit-content; text-align: center; margin: 20px auto;">
                     <img src="images/sumomogif.gif"><br>
                     Nothing to see here
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window" id="Goku_Patrol" style="display: none; width: 300px; top: 1%; left: 15%">
+            <div class="window-header">
+                <div class="background"></div>
+                <div class="window-title">goku_patrol.exe</div>
+                <div class="window-controls">
+                    <button class="window-minimize">_</button>
+                    <button class="window-close"><span class="visually-hidden">close</span></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div style="width: fit-content; text-align: center; margin: 20px auto;">
+                    <img src="images/goku_portrait.png"><br>
+                    <p>Every day at 3pm Central Standard Time, Son Goku patrols this website to ensure its safety.</p>
+                    <div id="goku_actions">
+                        <button onclick="feedGoku()">Give Goku a Snack</button>
+                    </div>
                 </div>
                 </div>
             </div>
@@ -217,7 +238,7 @@ hormonal and unpredictable. </p>
             <div class="window-body">
                 <p>This site would not have been possible with the Web Archive and Gifcities. There are also so many more resources that are keeping the spirit of web 1.0 alive, and this site is hugely indebted to those artists. If anything has not been properly credited on this site, please contact me.</p>
                 <p><strong>Gifs and other artwork</strong>: Gifcities, <a href="https://bettysgraphics.neocities.org/" target="_blank">Betty's Graphics</a>, <a href="https://archive.org/details/windows-95-all-icons" target="_blank">Windows 95 icons</a>, <a href="https://web.archive.org/web/20091027082824/http://geocities.com/Area51/Keep/7275/" target="_blank">Fantasy Realms</a></p>
-                <p><strong>Tools</strong>: <a href="https://doodad.dev/dither-me-this/" target="_blank">Dither Me This by Doodad.dev</a></p>
+                <p><strong>Tools</strong>: <a href="https://doodad.dev/dither-me-this/" target="_blank">Dither Me This by Doodad.dev</a>, <a href="http://www.spline.design" target="_blank">Spline</a></p>
                 <p><strong>HTML & CSS</strong>: Scrollbar styling, animated cursor </p>
                 <p><strong>Graphic interfaces</strong>: Originally from an old PC-95 game called <em>Diver's</em> by Mink NEC, but they are heavily edited.</p>
             </div>
@@ -245,7 +266,7 @@ hormonal and unpredictable. </p>
             </div>
         </div>
 
-        <div class="window" id="your-eyes" style="">
+        <div class="window" id="your-eyes" style="display:none;">
             <div class="window-header">
                 <div class="background"></div>
                 <div class="window-title">Your Eyes Only</div>
@@ -256,13 +277,13 @@ hormonal and unpredictable. </p>
             </div>
 
             <div class="window-toolbar">
-                <button>The Collection</button>
-                <button>About</button>
+                <button onclick="window.open('your_eyes.html', 'your-eyes-window')">The Collection</button>
+                <button onclick="window.open('your_eyes_only/about.html', 'your-eyes-window')">About</button>
                 <button>Inspiration</button>
             </div>
 
             <div class="window-body">
-                <iframe src="your_eyes_only/chii/index.html" width="796" height="565" frameborder="0"></iframe>
+                <iframe src="your_eyes.html" width="796" height="565" frameborder="0" name="your-eyes-window"></iframe>
             </div>
             </div>
         </div>
@@ -282,15 +303,26 @@ hormonal and unpredictable. </p>
                 <div class="icon-grid">
 
                     <div class="icon-app" data-window="welcome-exe">
-                        <img src="images/Notepad-Document.ico">
+                        <img src="images/welcome.gif">
                         <span>Welcome</span>
                         <span>.exe</span>
+                    </div>
+
+                    <div class="icon-app wing" data-window="your-eyes">
+                        <span class="wing"></span>
+                        <span>Your</span> <span>Eyes</span> <span>Only</span>
                     </div>
                     
                     <div class="icon-app" data-window="moon">
                         <span class="moon"></span>
                         <span>Moon</span>
                         <span>Phase</span>
+                    </div>
+
+                    <div class="icon-app" data-window="soft_wear">
+                        <span><img src="images/eye 6.gif"></span>
+                        <span>Soft</span>
+                        <span>Wear</span>
                     </div>
 
                     <div class="icon-app" data-window="the-library">
@@ -307,11 +339,13 @@ hormonal and unpredictable. </p>
                         <span>Exper&hellip;</span>
                     </div></a>
 
+                    <!--
                     <div class="icon-app" data-window="Under-Construction">
                         <img src="images/Web-documents.ico">
                         <span>Saved</span>
                         <span>Webpages</span>
                     </div>
+                    -->
 
                 </div>
             </div>
@@ -391,6 +425,8 @@ hormonal and unpredictable. </p>
             <img src="placeholders/winamp.png">
         </div>
 
+        <div id="goku"><img src="images/goku_nimbus_small.gif" class="icon-app" data-window="Goku_Patrol"></div>
+
         <div class="start-bar">
             <div class="buttons">
                 <button class="button-start">Begin</button>
@@ -401,7 +437,6 @@ hormonal and unpredictable. </p>
                 <div class="counter icon-app" id="moon_phase" data-window="moon"></div>
                 <div class="imood"><a href="https://www.imood.com/users/sailorvenusdemilo" target="_blank"><img src="https://moods.imood.com/display/uname-sailorvenusdemilo/fg-000/bg-C5C1C6/imood.gif" alt="The current mood of sailorvenusdemilo at www.imood.com" border="0"></a></div>
             </div>
-            
         </div>
 
         <!-- JavaScript -->
@@ -409,5 +444,6 @@ hormonal and unpredictable. </p>
         <script src="js/icons.js?07252024" type="text/JavaScript"></script>
         <script src="js/start_bar.js?07252024" type="text/JavaScript"></script>
         <script src="js/moon_phase.js?07252024" type="text/JavaScript"></script>
+        <script src="js/goku.js" type="text/JavaScript"></script>
     </body>
 </html>

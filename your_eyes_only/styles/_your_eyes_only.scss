@@ -22,10 +22,18 @@
 
         button {
             border: 0;
+            text-decoration: none;
+            cursor: pointer;
+            color: inherit;
+            font-size: 14px;
             background-color: transparent;
 
-            &::first-letter {
-                text-decoration: underline;
+            &:first-letter {
+                text-decoration: underline !important;
+            }
+
+            &:hover {
+                background-color: rgba(0,0,0, .3);
             }
         }
     }
