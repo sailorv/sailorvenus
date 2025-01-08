@@ -9,7 +9,7 @@ function setTime() {
 
     if (document.getElementById('goku')) {
         // make goku show if it's past 7
-        if (currentTime >= 19) {
+        if (currentTime >= 11 && currentTime < 15) {
             document.getElementById('goku').style.display = 'block';
         } else {
             document.getElementById('goku').style.display = 'none';
