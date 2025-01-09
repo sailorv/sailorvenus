@@ -38,15 +38,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Close window
-    const closeButtons = document.querySelectorAll('.window-close');
-    
-    closeButtons.forEach(button => {
-        button.addEventListener('click', function() {
+    // Start bar
+    // Select all elements with the class 'icon-app'
+    let startBarButtons = document.querySelector('.start-bar .buttons');
+    let startApps = Array.from(startBarButtons.children);
 
-            const windowDiv = button.closest('.window');
-            const windowID = windowDiv.id;
-            windowDiv.style.display = 'none';
+    const openApp = () => startApps.forEach(function(startApp) {
+        const windowId = startApp.getAttribute('data-window');
+        const windowElement = document.getElementById(windowId);
+
+        startApp.addEventListener('click', function() {
+            // Check if the window element exists
+            if (windowElement) {
+                // Set the 'display' style to 'block'
+                windowElement.style.display = 'block';
+            }
         });
     });
 
@@ -69,12 +75,29 @@ document.addEventListener('DOMContentLoaded', function() {
             if (document.getElementById(windowID + '-title')) {
                 // element already exists
             } else {
-                startBar.appendChild(windowMin);
+                startBar.insertAdjacentElement('beforebegin', windowMin);
             }
 
             // Hide window from display
             // windowDiv.style.display = 'none';
             windowDiv.style.display = 'none';
+            startApps.push(windowMin);
+            openApp();
+        });
+    });
+
+    // Close window
+    const closeButtons = document.querySelectorAll('.window-close');
+    
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+
+            const windowDiv = button.closest('.window');
+            const windowID = windowDiv.id;
+            windowDiv.style.display = 'none';
+            
+
+            // Add functionality to remove corresponding item from start bar
         });
     });
 });

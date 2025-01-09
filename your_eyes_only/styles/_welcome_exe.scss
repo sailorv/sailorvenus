@@ -97,6 +97,11 @@ $secondary: rgba(242, 68, 213, .5);
         color: #fff;
         padding: 5px;
         box-sizing: border-box;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
     }
 }
 
@@ -152,3 +157,6 @@ $secondary: rgba(242, 68, 213, .5);
     transition-delay: 10s;
   }
   
+.hidden-content {
+    display: none;
+}

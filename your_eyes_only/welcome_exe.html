@@ -23,26 +23,44 @@
             </div>
 
             <div class="navigation">
-                > CHANGELOG<br>
-                > EXPLORER GUIDE<br>
+                > <a href="#" onclick="updateContent('changelog')">CHANGELOG</a><br>
+                > <a href="#" onclick="updateContent('explorerguide')">EXPLORER GUIDE</a><br>
+                > <a href="#" onclick="updateContent('welcome')">TOP &uarr;</a>
             </div>
             <div class="message">
                 
-                <p class="typing">
-                    Hello digital spacefarer, you are visitor number <span class="counter">100,000</span> to visit this website. My name is Catherine and I'm pleased to welcome you.
-                </p>
-                <!-- 
-                <p class="typing">
-                    CHANGELOG<br>
-                    <u>JUL 5 2024</u> This is an update to the site. You can find it by clicking on "Your Eyes Only."
-                </p>-->
+                <div class="typing">
+                    <p>Hello digital spacefarer, you are visitor number <span class="counter">100,000</span> to visit this website. My name is Catherine and I'm pleased to welcome you.</p>
+                </div>
 
-                <div class="pixel-triangle has-anim">
+                <div class="hidden-content" id="welcome">
+                    <p>Hello digital spacefarer, you are visitor number <span class="counter">100,000</span> to visit this website. My name is Catherine and I'm pleased to welcome you.</p>
+                </div>
+
+                <div class="hidden-content" id="secondmessage">
+                    <p>This site is not optimized for anything, but especially not for phones. It is not architected. It is labyrinthine: haphazardly, impulsively constructed on sentimentality and whims.</p>
+                </div>
+
+                <div class="hidden-content" id="changelog">
+                    <p>CHANGELOG<br>
+                    <u>JUL 5 2024</u> This is an update to the site. You can find it by clicking on "Your Eyes Only."</p>
+                </div>
+
+                <div class="hidden-content" id="explorerguide">
+                    <p>EXPLORER GUIDE<br>
+                    <u>Your Eyes Only</u> is a fashion collection, and the main reason for this site.<br>
+                    <u>SoftWear</u> is Catherine's collection of outfits, sort of like a fashion blog but more boring.<br>
+                    <u>Moon Phase</u> tracks the phases of the moon in realtime.<br>
+                    <u>The Library</u> is still a work in progress, but it's Catherine's recommended booklist.
+                    </p>
+                </div>
+
+                <a href="#" onclick="updateContent('secondmessage')"><div class="pixel-triangle has-anim">
                     <div class="rec-upper"></div>
                     <div class="rec-middle"></div>
                     <div class="rec-lower"></div>
                     <div class="rec-tip"></div>
-                </div>
+                </div></a>
             </div>
         </div>
 

@@ -20,7 +20,7 @@ a.icon-link {
     text-decoration: none;
 }
 
-.icon-app {
+div.icon-app {
     width: 64px;
     text-align: center;
     font-size: 14px;
@@ -62,13 +62,13 @@ a.icon-link {
     }
 }
 
-.icon-app img {
+div.icon-app img {
     display: block;
     width: 32px;
     margin: auto;
 }
 
-.icon-app:hover {
+div.icon-app:hover {
     cursor: hand;
 }
 

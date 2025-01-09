@@ -255,6 +255,50 @@
   padding: 0 10px;
 }
 
+#start-menu {
+  position: absolute;
+  bottom: 58px;
+  z-index: 999;
+  display: none;
+}
+#start-menu ul {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  background: #cac6cb;
+  border: 0;
+  box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+  padding: var(--sp-xs);
+  cursor: pointer;
+}
+#start-menu ul li {
+  position: relative;
+  display: block;
+  border-bottom: solid 1px #a099a1;
+  padding: var(--sp-xs) calc(var(--sp-xs) * 4) var(--sp-xs) 0;
+}
+#start-menu ul li::first-letter {
+  border-bottom: 1px solid;
+}
+#start-menu ul li img {
+  margin-right: 4px;
+}
+#start-menu ul li > ul {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+#start-menu ul li > ul > li {
+  padding-left: 8px;
+}
+#start-menu ul li:hover {
+  color: blue;
+}
+#start-menu ul li:hover ul {
+  display: block;
+}
+
 /* Icon Library */
 .icon-grid {
   display: flex;
@@ -277,27 +321,27 @@ a.icon-link {
   text-decoration: none;
 }
 
-.icon-app {
+div.icon-app {
   width: 64px;
   text-align: center;
   font-size: 14px;
   position: relative;
 }
-.icon-app span {
+div.icon-app span {
   border: 1px dotted rgba(0, 0, 0, 0);
   box-sizing: content-box;
 }
-.icon-app span:first-child {
+div.icon-app span:first-child {
   display: block;
   height: 32px;
   width: 32px;
   margin: 0 auto;
 }
-.icon-app:active span {
+div.icon-app:active span {
   background-color: rgba(21, 40, 224, 0.25);
   border: dotted 1px rgb(21, 40, 224);
 }
-.icon-app.new::after {
+div.icon-app.new::after {
   content: "";
   display: block;
   position: absolute;
@@ -310,13 +354,13 @@ a.icon-link {
   background-repeat: no-repeat;
 }
 
-.icon-app img {
+div.icon-app img {
   display: block;
   width: 32px;
   margin: auto;
 }
 
-.icon-app:hover {
+div.icon-app:hover {
   cursor: hand;
 }
 
@@ -560,6 +604,10 @@ a.icon-link {
   padding: 5px;
   box-sizing: border-box;
 }
+.window-body-inside .navigation a {
+  color: #fff;
+  text-decoration: none;
+}
 
 /* triangle */
 .pixel-triangle {
@@ -613,6 +661,10 @@ a.icon-link {
 .has-anim {
   transition: all 0.2s ease-in-out;
   transition-delay: 10s;
+}
+
+.hidden-content {
+  display: none;
 }
 
 #newsletter {
@@ -697,7 +749,7 @@ button {
 /* Goku */
 #goku {
   position: absolute;
-  z-index: 1000;
+  z-index: 500;
   width: 100%;
   overflow: hidden;
   bottom: 60px;

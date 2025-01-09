@@ -65,4 +65,15 @@ document.addEventListener('DOMContentLoaded', function() {
             arrow.style.display = 'block';
         }, 8500);  // 5 seconds delay
     }
+
+    // Change typing text 
+    window.updateContent = function(targetId) {
+        var targetContent = document.querySelector(`#${targetId}`);
+        var typingElement = document.querySelector('.typing');
+        
+        if (targetContent && typingElement) {
+            typingElement.innerHTML = targetContent.innerHTML;
+            typeEffect(typingElement, 50); // Re-run typing effect
+        }
+    };
 });

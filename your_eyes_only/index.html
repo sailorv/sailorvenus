@@ -14,10 +14,10 @@
                 <span>My Computer</span>
             </div>
 
-            <a class="icon-app folder" data-window="programs">
+            <div class="icon-app folder" data-window="programs">
                 <span class="folder"></span>
                 <span>Programs</span>
-            </a>
+            </div>
 
             <div class="icon-app" data-window="guestbook">
                 <span><img src="images/Chat.ico"></span>
@@ -279,7 +279,7 @@ hormonal and unpredictable. </p>
             <div class="window-toolbar">
                 <button onclick="window.open('your_eyes.html', 'your-eyes-window')">The Collection</button>
                 <button onclick="window.open('your_eyes_only/about.html', 'your-eyes-window')">About</button>
-                <button>Inspiration</button>
+                <button>The Sequel</button>
             </div>
 
             <div class="window-body">
@@ -303,7 +303,7 @@ hormonal and unpredictable. </p>
                 <div class="icon-grid">
 
                     <div class="icon-app" data-window="welcome-exe">
-                        <img src="images/welcome.gif">
+                        <span><img src="images/Starfield.ico"></span>
                         <span>Welcome</span>
                         <span>.exe</span>
                     </div>
@@ -334,7 +334,7 @@ hormonal and unpredictable. </p>
                     
 
                     <a href="http://milk-experiment.net" target="_blank" class="icon-link"><div class="icon-app">
-                        <img src="images/Starfield.ico">
+                        <span><img src="images/welcome.gif"></span>
                         <span>Milk</span>
                         <span>Exper&hellip;</span>
                     </div></a>
@@ -429,13 +429,30 @@ hormonal and unpredictable. </p>
 
         <div class="start-bar">
             <div class="buttons">
-                <button class="button-start">Begin</button>
-                <button class="button-window" id="welcome-exe-title" data-window="welcome-exe">Welcome.exe</button>
+                <button class="button-start" onclick="startMenuOpen()">Begin</button>
+                <button id="welcome-exe-title" data-window="welcome-exe">Welcome.exe</button>
                 <div class="open-apps"></div>
             </div>
             <div class="status">
                 <div class="counter icon-app" id="moon_phase" data-window="moon"></div>
                 <div class="imood"><a href="https://www.imood.com/users/sailorvenusdemilo" target="_blank"><img src="https://moods.imood.com/display/uname-sailorvenusdemilo/fg-000/bg-C5C1C6/imood.gif" alt="The current mood of sailorvenusdemilo at www.imood.com" border="0"></a></div>
+            </div>
+            <div id="start-menu">
+                <ul>
+                    <li class="icon-app" data-window="welcome-exe" onclick="startMenuOpen()">
+                        <img src="images/Starfield.ico" width="20" height="20" align="left">
+                        Welcome
+                    </li>
+                    <li class="icon-app" data-window="readme" onclick="startMenuOpen()">
+                        <img src="images/Notepad-Document.ico" width="20" height="20" align="left">
+                        Readme
+                    </li>
+                    <!-- <li>Programs
+                        <ul>
+                            <li>Example</li>
+                        </ul>
+                    </li> -->
+                </ul>
             </div>
         </div>
 
