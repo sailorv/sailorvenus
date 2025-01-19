@@ -146,12 +146,14 @@
 }
 
 #guestbook,
-#the-library {
+#the-library,
+#about-me {
   width: 700px;
   max-height: 430px;
 }
 #guestbook .window-body,
-#the-library .window-body {
+#the-library .window-body,
+#about-me .window-body {
   overflow: hidden;
   max-height: 100%;
   padding: 0;

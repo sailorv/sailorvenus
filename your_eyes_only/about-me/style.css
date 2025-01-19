@@ -1,0 +1,124 @@
+body {
+  background-image: url('assets/starry.gif');
+  background-attachment: fixed;
+  color: #0080FF;
+  background-color: #000;
+  padding-bottom: 30px;
+}
+
+#website-wrapper {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+}
+
+@media screen and (min-width: 900px) {
+  #website-wrapper {
+    margin-left: 100px;
+    max-width: 800px;
+  }
+}
+
+nav {
+  width: 200px;
+  float: left;
+  display: none;
+}
+
+
+strong.underlined {
+  text-decoration: underline;
+}
+
+.img-left {
+  float: left;
+}
+
+.img-margin-right {
+  margin-right: 10px;
+}
+
+h2 {
+  font-family: 'Comic Sans MS', sans-serif;
+  color: lime;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+a.instagram-link {
+  border: 2px solid black;
+  display: inline-block;
+}
+a.instagram-link:hover {
+  border: 2px solid yellow;
+}
+
+#weblog h2 {
+  text-align: center;
+}
+
+a.guestbook-link {
+  display: inline-block;
+  color: #fff;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 18pt;
+  margin: auto 20px;
+  padding: 20px;
+}
+a.guestbook-link:hover {
+  text-decoration: none;
+  color: gold;
+}
+.guestbook-link:before {
+  content: '';
+  background-image: url('assets/artemis.gif');
+  display: block;
+  float: left;
+  height: 80px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+
+.meta {
+  font-family: "Courier New", monospace;
+}
+
+a.email-me {
+  color: pink;
+  cursor: crosshair;
+  display: block;
+  width: 200px;
+  background-image: url('assets/ring.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 10px auto;
+  text-align: left;
+  font-family: cursive;
+
+}
+a:hover.email-me {
+  color: white;
+}
