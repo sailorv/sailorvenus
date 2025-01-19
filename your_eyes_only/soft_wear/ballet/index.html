@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="../../blog/styles.css">
+
+        <!-- Fonts -->
+        <link rel="preload" href="https://www.stripe.press/fonts/SuisseIntlMono-Regular.otf" as="font" type="font/woff" crossorigin="">
+
+    </head>
+    <body class="dialog subpage">
+        <a href="../index.html" class="back-home">
+            <div class="animation animation-home">
+            <center>
+                <script type="module" src="https://unpkg.com/@splinetool/viewer@1.1.5/build/spline-viewer.js"></script>
+                <spline-viewer url="https://prod.spline.design/Edt8WuQ3w99GT4ND/scene.splinecode"></spline-viewer>
+            </center>
+            </div>
+        </a>
+        <div class="cols">
+            <div class="col-7">
+                <fieldset name="Outfit">
+                    <legend>Outfit details</legend>
+                    <div class="field">
+                        <label>Dress:</label>
+                        <input type="text" value="Mirror Palais">
+                    </div>
+
+                    <div class="field">
+                        <label>Second dress:</label>
+                        <input type="text" value="Made by me (worn underneath with sleeves)">
+                    </div>
+                </fieldset>
+                <fieldset name="Outfit">
+                    <legend>Outfit details</legend>
+                    <p>When I first ordered this corset, my boyfriend remarked that I "had too many corsets." This is a statement I can't even really begin to understand - especially because I feel like I don't have enough.</p>
+                </fieldset>
+            </div>
+            <div id="slideshow" class="col-5" style="margin-top: 7px;">
+                <div class="windows-border" style="margin-bottom: 8px;">
+                    <img src="IMG_1940.jpg" alt="Me in a Mirror Palais Dress" aria-hidden="false">
+                    <img src="IMG_1933.jpg" alt="Dress by Mirror Palais" aria-hidden="true">
+                    <img src="IMG_0873.PNG" alt="Dress by Mirror Palais" aria-hidden="true">
+                    <img src="IMG_0870.jpg" alt="Dress by Mirror Palais" aria-hidden="true">
+                    <img src="IMG_1279.jpg" alt="Dress by Mirror Palais" aria-hidden="true">
+                    <img src="IMG_1931.jpg" alt="Dress by Mirror Palais" aria-hidden="true">
+                    <img src="IMG_1930.jpg" alt="Dress by Mirror Palais" aria-hidden="true">
+                    <img src="IMG_1937.jpg" alt="Dress by Mirror Palais" aria-hidden="true">
+                    <img src="IMG_0871.PNG" alt="Dress by Mirror Palais" aria-hidden="true">
+                    <img src="IMG_1939.jpg" alt="Dress by Mirror Palais" aria-hidden="true">
+                    <img src="IMG_1925.jpg" alt="Dress by Mirror Palais" aria-hidden="true">
+                </div>
+                <button id="previous" onclick="prevSlide()">&laquo;</button>
+                <button id="next" onclick="nextSlide()">&raquo;</button>
+                <a href="#" id="new_window" target="_blank">Open Image in New Window</button>
+            </div>
+        </div>
+
+        
+
+        <footer>
+            <hr>
+            &copy; catherine
+        </footer>
+        <script src="/js/slideshow.js" type="text/javascript"></script>
+    </body>
+</html>

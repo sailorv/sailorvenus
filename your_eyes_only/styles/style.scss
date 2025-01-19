@@ -39,7 +39,6 @@ button {
 /* Goku */
 #goku {
     position: absolute;
-    z-index: 500;
     width: 100%;
     overflow: hidden;
     bottom: 60px;
@@ -50,10 +49,58 @@ button {
     position: relative;
     animation: goku 24s linear infinite;
     animation-delay: 1s;
+    cursor: pointer;
+
+    &:hover {
+        animation-play-state: paused;
+    }
 }
 
-@keyframes goku
-{
+#Portal {
+    mix-blend-mode: color-dodge;
+    position: absolute; 
+    right: 5%;
+    animation: portal 5s linear; 
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    display: block;
+    height: 150px;
+    transform: scale(0%);
+    cursor: pointer;
+
+    img {
+        height: 150px;
+        width: 150px;
+    }
+
+    &:hover {
+
+        img {
+            animation: pulseOpacity 3s ease-out infinite;
+        }
+    }
+}
+
+@keyframes portal {
+    0% {
+        transform: scale(0%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+@keyframes pulseOpacity {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: .99;
+    }
+}
+@keyframes goku {
     0% {
         left: 0;
     }

@@ -105,7 +105,8 @@ function fetchLocalMoonData() {
       });
   }
 
-  // Dropdowns
+  /* Dropdowns
+  // Will eventually reenable this functionality for selecting a date
   // Set up event listener for the fetch button
 document.getElementById('fetchData').addEventListener('click', function() {
   // Get selected values from dropdowns
@@ -123,6 +124,7 @@ document.getElementById('fetchData').addEventListener('click', function() {
     alert('Please select a valid date!');
   }
 });
+*/
 
 function fetchMoonPhase(selectedDate) {
   let unixTimestamp = Math.round(selectedDate.getTime() / 1000);

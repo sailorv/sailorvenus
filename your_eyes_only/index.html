@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div id="goku"><img src="images/goku_nimbus_small.gif" class="icon-app" data-window="Goku_Patrol"></div>
         <div class="icon-grid">
             <div class="icon-app" data-window="My-Computer">
                 <span class="my-computer"><img src="images/My-Computer.ico"></span>
@@ -241,6 +242,7 @@ hormonal and unpredictable. </p>
                 <p><strong>Tools</strong>: <a href="https://doodad.dev/dither-me-this/" target="_blank">Dither Me This by Doodad.dev</a>, <a href="http://www.spline.design" target="_blank">Spline</a></p>
                 <p><strong>HTML & CSS</strong>: Scrollbar styling, animated cursor </p>
                 <p><strong>Graphic interfaces</strong>: Originally from an old PC-95 game called <em>Diver's</em> by Mink NEC, but they are heavily edited.</p>
+                <p><strong>Etc</strong>: <a href="https://www.sounds-resource.com/nintendo_switch/octopathtraveler/sound/17085/">Sounds Resource</a> (and Octopath Traveler) for some of the sounds used on the site</p>
             </div>
         </div>
 
@@ -254,15 +256,17 @@ hormonal and unpredictable. </p>
                 </div>
             </div>
             <div class="window-body">
-                <p>Currently the newsletter is still a work in progress. If you would like to receive an email for when the newsletter is ready, please enter your email address.</p>
-                <p>This will not subscribe you to the newsletter. Once the newsletter has been released, you will have a chance to view sample issues and subscribe then. This email will be a one-time notification to sign up for the Newsletter.</p>
-                <form>
+                <p>Updates will be summarized in a biweekly newsletter. You can subscribe to these updates by leaving your name and email address below.</p>
+                <form id="newsletterForm" action="http://localhost:3000/submit" method="post">
                     <label for="email">Email</label><br>
-                    <input type="text" id="email" size="40"><br>
+                    <input type="text" id="email" name="email" size="40"><br>
                     <label for="name">Name</label><br>
-                    <input type="text" id="name" size="40"><br>
+                    <input type="text" id="name" name="name" size="40"><br>
                     <input type="submit" value="Notify me">
                 </form>
+                <div id="successMessage" style="display: none;">
+                    Thank you for signing up! Your submission was successful.
+                </div>
             </div>
         </div>
 
@@ -425,12 +429,10 @@ hormonal and unpredictable. </p>
             <img src="placeholders/winamp.png">
         </div>
 
-        <div id="goku"><img src="images/goku_nimbus_small.gif" class="icon-app" data-window="Goku_Patrol"></div>
-
         <div class="start-bar">
             <div class="buttons">
                 <button class="button-start" onclick="startMenuOpen()">Begin</button>
-                <button id="welcome-exe-title" data-window="welcome-exe">Welcome.exe</button>
+                <button id="welcome-exe-title" class="icon-app" data-window="welcome-exe">Welcome.exe</button>
                 <div class="open-apps"></div>
             </div>
             <div class="status">
@@ -438,6 +440,9 @@ hormonal and unpredictable. </p>
                 <div class="imood"><a href="https://www.imood.com/users/sailorvenusdemilo" target="_blank"><img src="https://moods.imood.com/display/uname-sailorvenusdemilo/fg-000/bg-C5C1C6/imood.gif" alt="The current mood of sailorvenusdemilo at www.imood.com" border="0"></a></div>
             </div>
             <div id="start-menu">
+                <audio id="startHoverSound">
+                    <source src="/assets/sounds/octopath_click.wav">
+                </audio>
                 <ul>
                     <li class="icon-app" data-window="welcome-exe" onclick="startMenuOpen()">
                         <img src="images/Starfield.ico" width="20" height="20" align="left">
@@ -461,6 +466,8 @@ hormonal and unpredictable. </p>
         <script src="js/icons.js?07252024" type="text/JavaScript"></script>
         <script src="js/start_bar.js?07252024" type="text/JavaScript"></script>
         <script src="js/moon_phase.js?07252024" type="text/JavaScript"></script>
+        <script src="js/newsletter.js" type="text/JavaScript"></script>
         <script src="js/goku.js" type="text/JavaScript"></script>
+        <script src="js/portal.js" type="text/JavaScript"></script>
     </body>
 </html>

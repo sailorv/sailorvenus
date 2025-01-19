@@ -77,3 +77,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 });
+
+// Welcome sounds
+const welcomeAudio = new Audio('/assets/sounds/octopath_click.wav');
+const navigationLinks = document.querySelectorAll('.navigation a');
+
+navigationLinks.forEach(function(menuLink) {
+    menuLink.addEventListener('mouseover', function(event) {
+        welcomeAudio.play();
+    });
+});
