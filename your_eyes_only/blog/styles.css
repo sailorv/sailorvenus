@@ -306,7 +306,7 @@ body.dialog .field :first-child {
   width: 30%;
   text-align: right;
 }
-body.dialog input {
+body.dialog input, body.dialog textarea {
   background-color: #fff;
   font-family: "JetBrains Mono", monospace;
   border: solid 1px;
@@ -314,12 +314,13 @@ body.dialog input {
   margin: calc(var(--sp-xxs) * 2) 0;
   padding: 4px;
   width: 70%;
+  resize: none;
   border-left: 2px solid #666;
   border-top: 2px solid #666;
   border-bottom: 2px solid #ccc;
   border-right: 2px solid #ccc;
 }
-body.dialog input:focus, body.dialog input:focus-visible {
+body.dialog input:focus, body.dialog input:focus-visible, body.dialog textarea:focus, body.dialog textarea:focus-visible {
   box-shadow: 0 0 0 0.1rem rgba(21, 40, 224, 0.25);
   border: solid 2px rgb(21, 40, 224) !important;
   outline: none;
@@ -365,7 +366,8 @@ body.dialog a {
   color: blue;
   font-weight: bold;
 }
-body.dialog button {
+body.dialog button,
+body.dialog #pinterest_link {
   font-family: "JetBrains Mono", monospace;
   background: #cac6cb;
   border: 0;
@@ -374,14 +376,17 @@ body.dialog button {
   cursor: pointer;
   padding: 6px;
 }
-body.dialog button:first-letter {
+body.dialog button:first-letter,
+body.dialog #pinterest_link:first-letter {
   text-decoration: underline;
 }
-body.dialog button.wide {
+body.dialog button.wide,
+body.dialog #pinterest_link.wide {
   width: 100%;
   text-align: center;
 }
-body.dialog button:active {
+body.dialog button:active,
+body.dialog #pinterest_link:active {
   box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #cac6cb, inset 2px 2px 0 0 #a099a1;
 }
 body.dialog .windows-border {
@@ -405,8 +410,30 @@ body.dialog .windows-border {
   height: fit-content;
 }
 
+#slideshow {
+  position: relative;
+}
 #slideshow img[aria-hidden=true] {
   display: none;
+}
+#slideshow #pinterest_link {
+  position: absolute;
+  font-size: 10px;
+  color: #000;
+  font-weight: normal;
+  text-decoration: none;
+  display: flex;
+  top: 1px;
+  left: 1px;
+}
+#slideshow #pinterest_link::before {
+  content: "";
+  display: block;
+  margin-right: 6px;
+  background-image: url("../images/pin.png");
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 12px;
 }
 
 /*# sourceMappingURL=styles.css.map */

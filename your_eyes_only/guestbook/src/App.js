@@ -27,7 +27,7 @@ const App = () => {
         </div>
           <GuestbookEntries entries={entries} />
       </div>
-      <div class="status-bar">
+      <div className="status-bar">
         total entries: {entryCount}
       </div>
     </div>

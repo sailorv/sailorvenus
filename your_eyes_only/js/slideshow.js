@@ -3,6 +3,9 @@ var slideshowWrapper = document.getElementById('slideshow');
 if (slideshowWrapper) {
   var slides = slideshowWrapper.querySelectorAll('img');
   const newWindow = document.getElementById('new_window');
+  const pinterestButton = document.getElementById('pinterest_link');
+  const siteLink = 'https://www.sailorven.us';
+  const siteDesc = 'your_eyes_only.exe';
 
   if (slides.length > 1) {
     let slideIndex = 1;
@@ -22,6 +25,7 @@ if (slideshowWrapper) {
 
     function showSlides(n) {
       let i;
+      const imageLink = slides[slideIndex - 1].getAttribute('src');
       if (n > slides.length) {
         slideIndex = 1;
       }
@@ -33,12 +37,21 @@ if (slideshowWrapper) {
       }
 
       if (newWindow) {
-        newWindow.setAttribute('href',slides[slideIndex - 1].getAttribute('src'));
+        newWindow.setAttribute('href',imageLink);
+      }
+
+      if (pinterestButton) {
+        const imageURL = slides[slideIndex - 1].src;
+        const pinterestLink = `https://www.pinterest.com/pin/create/button/?url=${siteLink}&media=${imageURL}&description=${siteDesc}`;
+        pinterestButton.setAttribute('href',pinterestLink);
       }
 
       slides[slideIndex - 1].setAttribute('aria-hidden', 'false');
     }
   }
+
+  // Pinterest button
+  // 
 
   // For automatic advance
   // setInterval(() => {
