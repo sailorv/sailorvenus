@@ -1,0 +1,11 @@
+.filter {
+  aspect-ratio: 4/5;
+  width: 300px;
+  overflow: hidden;
+}
+.filter img {
+  width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=filters.css.map */

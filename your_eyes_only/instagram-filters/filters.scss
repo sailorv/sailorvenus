@@ -1,0 +1,31 @@
+body {
+    background: none;
+}
+
+.window {
+    margin: 0;
+    width: calc(100% - 10px);
+    height: calc(375px - 10px);
+    position: relative;
+
+    .window-body {
+        overflow: hidden;
+        position: relative;
+    }
+}
+
+.filter {
+    aspect-ratio: 4/5;
+    width: 300px;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.grid {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
